@@ -28,6 +28,7 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate {
        let location = locations.first!
        let coordinateRegion = MKCoordinateRegion(center: location.coordinate, latitudinalMeters: 500, longitudinalMeters: 500)
        mapView.setRegion(coordinateRegion, animated: true)
+       locationManager.stopUpdatingLocation()
     }
     
     //MARK: - Permissions
