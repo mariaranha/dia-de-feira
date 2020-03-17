@@ -39,15 +39,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		9C2DD38823CDEA9800EEED9E /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				9C6743CA23CCA0F200B1ECA8 /* HomeViewController.swift */,
-				9C6F1D922420F66F00D3648A /* Data */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
 		9C6743BA23CCA0F200B1ECA8 = {
 			isa = PBXGroup;
 			children = (
@@ -67,7 +58,10 @@
 		9C6743C523CCA0F200B1ECA8 /* DiaDeFeira */ = {
 			isa = PBXGroup;
 			children = (
-				9C2DD38823CDEA9800EEED9E /* Controller */,
+				9C6F1D972420FB0C00D3648A /* Card */,
+				9C6F1D962420FB0300D3648A /* Home */,
+				9C6F1D952420FAF000D3648A /* Filter */,
+				9C6F1D922420F66F00D3648A /* Data */,
 				9C6743C623CCA0F200B1ECA8 /* AppDelegate.swift */,
 				9C6743C823CCA0F200B1ECA8 /* SceneDelegate.swift */,
 				9C6743CC23CCA0F200B1ECA8 /* Main.storyboard */,
@@ -84,6 +78,28 @@
 				9C6F1D932420F68900D3648A /* feiras-sp.json */,
 			);
 			path = Data;
+			sourceTree = "<group>";
+		};
+		9C6F1D952420FAF000D3648A /* Filter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Filter;
+			sourceTree = "<group>";
+		};
+		9C6F1D962420FB0300D3648A /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				9C6743CA23CCA0F200B1ECA8 /* HomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		9C6F1D972420FB0C00D3648A /* Card */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Card;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
