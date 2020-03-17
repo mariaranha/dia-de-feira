@@ -13,6 +13,7 @@
 		9C6743CE23CCA0F200B1ECA8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C6743CC23CCA0F200B1ECA8 /* Main.storyboard */; };
 		9C6743D023CCA0F300B1ECA8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C6743CF23CCA0F300B1ECA8 /* Assets.xcassets */; };
 		9C6743D323CCA0F300B1ECA8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C6743D123CCA0F300B1ECA8 /* LaunchScreen.storyboard */; };
+		9C6F1D942420F68900D3648A /* feiras-sp.json in Resources */ = {isa = PBXBuildFile; fileRef = 9C6F1D932420F68900D3648A /* feiras-sp.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		9C6743CF23CCA0F300B1ECA8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9C6743D223CCA0F300B1ECA8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9C6743D423CCA0F300B1ECA8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9C6F1D932420F68900D3648A /* feiras-sp.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = "feiras-sp.json"; path = "../../../../../feiras-sp.json"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +43,7 @@
 			isa = PBXGroup;
 			children = (
 				9C6743CA23CCA0F200B1ECA8 /* HomeViewController.swift */,
+				9C6F1D922420F66F00D3648A /* Data */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -73,6 +76,14 @@
 				9C6743D423CCA0F300B1ECA8 /* Info.plist */,
 			);
 			path = DiaDeFeira;
+			sourceTree = "<group>";
+		};
+		9C6F1D922420F66F00D3648A /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				9C6F1D932420F68900D3648A /* feiras-sp.json */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -133,6 +144,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C6F1D942420F68900D3648A /* feiras-sp.json in Resources */,
 				9C6743D323CCA0F300B1ECA8 /* LaunchScreen.storyboard in Resources */,
 				9C6743D023CCA0F300B1ECA8 /* Assets.xcassets in Resources */,
 				9C6743CE23CCA0F200B1ECA8 /* Main.storyboard in Resources */,
