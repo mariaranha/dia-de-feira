@@ -15,14 +15,20 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate {
     
     fileprivate let locationManager = CLLocationManager()
     
+    var searchBar = UISearchBar()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        setSearchBar()
         
         checkLocationPermission()
         
         locationManager.delegate = self
 
     }
+    
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
        let location = locations.first!
@@ -31,14 +37,22 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate {
        locationManager.stopUpdatingLocation()
     }
     
+    
+    fileprivate func setSearchBar() {
+        self.navigationItem.titleView = searchBar
+        self.searchBar.sizeToFit()
+        self.searchBar.placeholder = "Buscar Feiras"
+    }
+    
+    
     //MARK: - Permissions
     func checkLocationPermission() {
-      if CLLocationManager.authorizationStatus() == .authorizedWhenInUse {
-         locationManager.startUpdatingLocation()
-         self.mapView.showsUserLocation = true
-      } else {
-         locationManager.requestWhenInUseAuthorization()
-      }
+        if CLLocationManager.authorizationStatus() == .authorizedWhenInUse {
+            locationManager.startUpdatingLocation()
+            self.mapView.showsUserLocation = true
+        } else {
+            locationManager.requestWhenInUseAuthorization()
+        }
     }
 
 }

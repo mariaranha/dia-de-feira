@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zax-oe-DMc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zax-oe-DMc">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -29,51 +29,34 @@
                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" canCancelContentTouches="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dxj-jS-qP8">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="53"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleAspectFit" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="WAo-xt-IFZ">
-                                                <rect key="frame" x="0.0" y="12" width="550" height="29"/>
+                                            <stackView opaque="NO" contentMode="scaleAspectFill" distribution="fillEqually" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="WAo-xt-IFZ">
+                                                <rect key="frame" x="0.0" y="11.5" width="550" height="30"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OMc-zD-PNi">
-                                                        <rect key="frame" x="8" y="0.0" width="5" height="29"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="5" id="lfB-jU-v3G"/>
-                                                            <constraint firstAttribute="height" constant="29" id="pE2-IZ-LR9"/>
-                                                        </constraints>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mxZ-1v-8Af">
+                                                        <rect key="frame" x="8" y="0.0" width="55" height="30"/>
+                                                        <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                                         <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                                <real key="value" value="0.0"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                                <color key="value" red="0.14117647059999999" green="0.54117647059999996" blue="0.23921568630000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                        </userDefinedRuntimeAttributes>
-                                                    </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mxZ-1v-8Af">
-                                                        <rect key="frame" x="22" y="0.0" width="29" height="29"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="29" id="E5N-I3-byD"/>
-                                                            <constraint firstAttribute="height" constant="29" id="rAu-Ae-Zm0"/>
-                                                        </constraints>
-                                                        <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <state key="normal" image="barsFilter"/>
+                                                        <state key="normal" image="barsFilter">
+                                                            <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                                                        </state>
                                                         <state key="selected" image="barsFilterSelected"/>
                                                         <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
                                                                 <real key="value" value="0.5"/>
                                                             </userDefinedRuntimeAttribute>
                                                             <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
                                                                 <color key="value" red="0.14117647059999999" green="0.54117647059999996" blue="0.23921568630000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                <integer key="value" value="5"/>
+                                                            </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </button>
-                                                    <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XDB-YH-iBN">
-                                                        <rect key="frame" x="60" y="0.0" width="70" height="29"/>
+                                                    <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XDB-YH-iBN">
+                                                        <rect key="frame" x="68" y="0.0" width="55" height="30"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="29" id="TgM-7v-JlY"/>
-                                                            <constraint firstAttribute="width" constant="70" id="yfC-as-WG0"/>
-                                                        </constraints>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                                         <state key="normal" title="Todos">
                                                             <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
@@ -84,25 +67,21 @@
                                                             <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
                                                         <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
                                                                 <real key="value" value="0.5"/>
                                                             </userDefinedRuntimeAttribute>
                                                             <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
                                                                 <color key="value" red="0.14117647059999999" green="0.54117647059999996" blue="0.23921568630000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                                 <real key="value" value="5"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </button>
-                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MD4-HU-7Ni">
-                                                        <rect key="frame" x="138.5" y="0.0" width="50" height="29"/>
+                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MD4-HU-7Ni">
+                                                        <rect key="frame" x="128" y="0.0" width="54.5" height="30"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="29" id="YEF-cU-DBR"/>
-                                                            <constraint firstAttribute="width" constant="50" id="k5a-wM-TZD"/>
-                                                        </constraints>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                                         <state key="normal" title="Dom">
                                                             <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
@@ -113,25 +92,21 @@
                                                             <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
                                                         <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
                                                                 <real key="value" value="0.5"/>
                                                             </userDefinedRuntimeAttribute>
                                                             <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
                                                                 <color key="value" red="0.14117647059999999" green="0.54117647059999996" blue="0.23921568630000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                                 <real key="value" value="5"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </button>
-                                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZEY-6b-9OV">
-                                                        <rect key="frame" x="197.5" y="0.0" width="50" height="29"/>
+                                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZEY-6b-9OV">
+                                                        <rect key="frame" x="187.5" y="0.0" width="55" height="30"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="50" id="XwX-4K-CxM"/>
-                                                            <constraint firstAttribute="height" constant="29" id="kqD-aS-xhc"/>
-                                                        </constraints>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                                         <state key="normal" title="Seg">
                                                             <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
@@ -142,25 +117,21 @@
                                                             <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
                                                         <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
                                                                 <real key="value" value="0.5"/>
                                                             </userDefinedRuntimeAttribute>
                                                             <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
                                                                 <color key="value" red="0.14117647059999999" green="0.54117647059999996" blue="0.23921568630000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                                 <real key="value" value="5"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </button>
                                                     <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B6Y-lx-bKl">
-                                                        <rect key="frame" x="256.5" y="0.0" width="50" height="29"/>
+                                                        <rect key="frame" x="247.5" y="0.0" width="55" height="30"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="29" id="5ly-lv-JLJ"/>
-                                                            <constraint firstAttribute="width" constant="50" id="Mlf-ui-e2i"/>
-                                                        </constraints>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                                         <state key="normal" title="Ter">
                                                             <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
@@ -171,25 +142,21 @@
                                                             <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
                                                         <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
                                                                 <real key="value" value="0.5"/>
                                                             </userDefinedRuntimeAttribute>
                                                             <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
                                                                 <color key="value" red="0.14117647059999999" green="0.54117647059999996" blue="0.23921568630000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                                 <real key="value" value="5"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </button>
                                                     <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nUp-em-xWx">
-                                                        <rect key="frame" x="315.5" y="0.0" width="50" height="29"/>
+                                                        <rect key="frame" x="307.5" y="0.0" width="55" height="30"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="50" id="Kwq-SM-DEk"/>
-                                                            <constraint firstAttribute="height" constant="29" id="Udi-3J-127"/>
-                                                        </constraints>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                                         <state key="normal" title="Qua">
                                                             <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
@@ -200,25 +167,21 @@
                                                             <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
                                                         <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
                                                                 <real key="value" value="0.5"/>
                                                             </userDefinedRuntimeAttribute>
                                                             <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
                                                                 <color key="value" red="0.14117647059999999" green="0.54117647059999996" blue="0.23921568630000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                                 <real key="value" value="5"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </button>
                                                     <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SFk-Rs-2hx">
-                                                        <rect key="frame" x="374" y="0.0" width="50" height="29"/>
+                                                        <rect key="frame" x="367.5" y="0.0" width="54.5" height="30"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="29" id="Bhu-jl-BHm"/>
-                                                            <constraint firstAttribute="width" constant="50" id="h8y-Rf-r60"/>
-                                                        </constraints>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                                         <state key="normal" title="Qui">
                                                             <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
@@ -229,25 +192,21 @@
                                                             <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
                                                         <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
                                                                 <real key="value" value="0.5"/>
                                                             </userDefinedRuntimeAttribute>
                                                             <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
                                                                 <color key="value" red="0.14117647059999999" green="0.54117647059999996" blue="0.23921568630000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                                 <real key="value" value="5"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </button>
                                                     <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GFW-fD-UYv">
-                                                        <rect key="frame" x="433" y="0.0" width="50" height="29"/>
+                                                        <rect key="frame" x="427" y="0.0" width="55" height="30"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="29" id="gWm-M4-6Px"/>
-                                                            <constraint firstAttribute="width" constant="50" id="h4M-Wt-JhM"/>
-                                                        </constraints>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                                         <state key="normal" title="Sex">
                                                             <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
@@ -258,25 +217,21 @@
                                                             <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
                                                         <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
                                                                 <real key="value" value="0.5"/>
                                                             </userDefinedRuntimeAttribute>
                                                             <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
                                                                 <color key="value" red="0.14117647059999999" green="0.54117647059999996" blue="0.23921568630000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                                 <real key="value" value="5"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </button>
                                                     <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Xr-Ws-u2N">
-                                                        <rect key="frame" x="492" y="0.0" width="50" height="29"/>
+                                                        <rect key="frame" x="487" y="0.0" width="55" height="30"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="50" id="3Au-1y-ici"/>
-                                                            <constraint firstAttribute="height" constant="29" id="Aw8-GS-CYg"/>
-                                                        </constraints>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                                         <state key="normal" title="Sab">
                                                             <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
@@ -287,13 +242,13 @@
                                                             <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
                                                         <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
                                                                 <real key="value" value="0.5"/>
                                                             </userDefinedRuntimeAttribute>
                                                             <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
                                                                 <color key="value" red="0.14117647059999999" green="0.54117647059999996" blue="0.23921568630000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                                 <real key="value" value="5"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
@@ -346,6 +301,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="ffV-3b-IaS">
                         <barButtonItem key="backBarButtonItem" title="Voltar" id="CNM-2i-3DO"/>
+                        <barButtonItem key="rightBarButtonItem" image="heart.fill" catalog="system" id="vsF-YA-he8"/>
                     </navigationItem>
                     <connections>
                         <outlet property="mapView" destination="IOT-Ar-4DS" id="Sqa-09-oBn"/>
@@ -379,5 +335,6 @@
     <resources>
         <image name="barsFilter" width="30" height="30"/>
         <image name="barsFilterSelected" width="30" height="30"/>
+        <image name="heart.fill" catalog="system" width="128" height="109"/>
     </resources>
 </document>
