@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B94CF0924EACFA7001C6960 /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B94CF0724EACFA7001C6960 /* CardViewController.swift */; };
+		0B94CF0A24EACFA7001C6960 /* CardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B94CF0824EACFA7001C6960 /* CardViewController.xib */; };
+		0B94CF0C24EAD4C9001C6960 /* VerticalButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B94CF0B24EAD4C9001C6960 /* VerticalButton.swift */; };
 		2F3FA51424EAB0A500F56EC7 /* feiras-sp.json in Resources */ = {isa = PBXBuildFile; fileRef = 2F3FA51324EAB0A500F56EC7 /* feiras-sp.json */; };
 		9C6743C723CCA0F200B1ECA8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6743C623CCA0F200B1ECA8 /* AppDelegate.swift */; };
 		9C6743C923CCA0F200B1ECA8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6743C823CCA0F200B1ECA8 /* SceneDelegate.swift */; };
@@ -17,6 +20,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0B94CF0724EACFA7001C6960 /* CardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
+		0B94CF0824EACFA7001C6960 /* CardViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardViewController.xib; sourceTree = "<group>"; };
+		0B94CF0B24EAD4C9001C6960 /* VerticalButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalButton.swift; sourceTree = "<group>"; };
 		2F3FA51324EAB0A500F56EC7 /* feiras-sp.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "feiras-sp.json"; sourceTree = "<group>"; };
 		9C6743C323CCA0F200B1ECA8 /* DiaDeFeira.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DiaDeFeira.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C6743C623CCA0F200B1ECA8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -98,6 +104,9 @@
 		9C6F1D972420FB0C00D3648A /* Card */ = {
 			isa = PBXGroup;
 			children = (
+				0B94CF0724EACFA7001C6960 /* CardViewController.swift */,
+				0B94CF0B24EAD4C9001C6960 /* VerticalButton.swift */,
+				0B94CF0824EACFA7001C6960 /* CardViewController.xib */,
 			);
 			path = Card;
 			sourceTree = "<group>";
@@ -163,6 +172,7 @@
 				9C6743D323CCA0F300B1ECA8 /* LaunchScreen.storyboard in Resources */,
 				9C6743D023CCA0F300B1ECA8 /* Assets.xcassets in Resources */,
 				9C6743CE23CCA0F200B1ECA8 /* Main.storyboard in Resources */,
+				0B94CF0A24EACFA7001C6960 /* CardViewController.xib in Resources */,
 				2F3FA51424EAB0A500F56EC7 /* feiras-sp.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -174,8 +184,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B94CF0924EACFA7001C6960 /* CardViewController.swift in Sources */,
 				9C6743CB23CCA0F200B1ECA8 /* HomeViewController.swift in Sources */,
 				9C6743C723CCA0F200B1ECA8 /* AppDelegate.swift in Sources */,
+				0B94CF0C24EAD4C9001C6960 /* VerticalButton.swift in Sources */,
 				9C6743C923CCA0F200B1ECA8 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -321,7 +333,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = VZ4Y7Q4FJ2;
+				DEVELOPMENT_TEAM = FKFGBBGDU2;
 				INFOPLIST_FILE = DiaDeFeira/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -339,7 +351,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = VZ4Y7Q4FJ2;
+				DEVELOPMENT_TEAM = FKFGBBGDU2;
 				INFOPLIST_FILE = DiaDeFeira/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
