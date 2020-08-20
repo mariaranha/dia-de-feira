@@ -1,0 +1,643 @@
+[
+    {
+        "city":"Campinas",
+        "neighborhood": "Bonfim",
+        "street": "R. Germânia",
+        "latitude": -22.895660,
+        "longitude": -47.077320,
+        "weekdays": "Terça-feira",
+        "categories": ["Brinquedo", "Carnes e Peixes", "Comida", "Doces", "Hortifruti", "Vestuário"]
+    },{
+        "city":"Campinas",
+        "neighborhood": "Campo Grande",
+        "street": "Praça da Concórdia - R. Manoel Machado Pereira",
+        "latitude": -22.9433417,
+        "longitude": -47.1838351,
+        "weekdays": "Terça-feira",
+        "categories": [""]
+    },{
+        "city":"Campinas",
+        "neighborhood": "Chapadão",
+        "street": "R. Côneco Manoel Garcia",
+        "latitude": -22.8843178,
+        "longitude": -47.0858294,
+        "weekdays": "Terça-feira",
+        "categories": ["Carnes e Peixes", "Comida", "Hortifruti"]
+    },{
+        "city":"Campinas",
+        "neighborhood": "Convivência",
+        "street": "Praça Imprensa Fluminense",
+        "latitude": -22.901455,
+        "longitude": -47.0531951,
+        "weekdays": "Terça-feira",
+        "categories": [""]
+    },{
+        "city":"Campinas",
+        "neighborhood": "Jardim Amazonas",
+        "street": "R. Tabira",
+        "latitude": -22.9431136179739,
+        "longitude": -47.036580914763256,
+        "weekdays": "Terça-feira",
+        "categories": [""]
+    },{
+        "city":"Campinas",
+        "neighborhood": "Jardim Guanabara",
+        "street": "R. José Paulino",
+        "latitude": -22.8953678,
+        "longitude": -47.0663605,
+        "weekdays": "Terça-feira",
+        "categories": [""]
+    },{
+        "city":"Campinas",
+        "neighborhood": "Jardim Nova Europa",
+        "street": "R. Jaime Lopes Diniz",
+        "latitude": -22.9408867,
+        "longitude": -47.0552305,
+        "weekdays": "Terça-feira",
+        "categories": [""]
+    }, {
+        "city":"Campinas",
+        "neighborhood": "Jardim Planalto",
+        "street": "R. Dr. Jesuíno Marcondes Machado",
+        "latitude": -22.8904697,
+        "longitude": -47.0402625,
+        "weekdays": "Terça-feira",
+        "categories": [""]
+    },{
+        "city":"Campinas",
+        "neighborhood": "Pacaembu",
+        "street": "R. Maria Aparecida Ferreira Rozo",
+        "latitude": -22.9046275,
+        "longitude": -47.1000138,
+        "weekdays": "Terça-feira",
+        "categories": [""]
+    },{
+        "city":"Campinas",
+        "neighborhood": "Parque Industrial",
+        "street": "R. Luiz Franca de Camargo",
+        "latitude": -22.9192373,
+        "longitude": -47.0853568,
+        "weekdays": "Terça-feira",
+        "categories": [""]
+    },{
+        "city":"Campinas",
+        "neighborhood": "Parque Taquaral",
+        "street": "R. Fernão Lopes",
+        "latitude": -22.869387,
+        "longitude": -47.0616928,
+        "weekdays": "Terça-feira",
+        "categories": [""]
+    },{
+        "city":"Campinas",
+        "neighborhood": "Vila Joaquim Inacio",
+        "street": "Av. Francisco de Angelis",
+        "latitude": -22.9285633,
+        "longitude": -47.0544997,
+        "weekdays": "Terça-feira",
+        "categories": [""]
+    },{
+        "city":"Campinas",
+        "neighborhood": "Barão Geraldo",
+        "street": "Rua Alzira A. Aranha",
+        "latitude": -22.8300786,
+        "longitude": -47.0793463,
+        "weekdays": "Quarta-feira",
+        "categories": [""]
+    },{
+        "city":"Campinas",
+        "neighborhood": "Bosque",
+        "street": "Bosque dos Jequitibas",
+        "latitude": -22.89067913292591,
+        "longitude": -47.11987297061699,
+        "weekdays": "Quarta-feira",
+        "categories": [""]
+    },{
+        "city":"Campinas",
+        "neighborhood": "Cidade Universitária",
+        "street": "R. Maria Tereza Dias da Silva",
+        "latitude": -22.81193576143408,
+        "longitude": -47.079689892569526,
+        "weekdays": "Quarta-feira",
+        "categories": [""]
+    },{
+        "city":"Campinas",
+        "neighborhood": "Boa Vista",
+        "street": "R. dos Ébanos",
+        "latitude": -22.8923496,
+        "longitude": -47.1229644,
+        "weekdays": "Quarta-feira",
+        "categories": [""]
+    },{
+        "city":"Campinas",
+        "neighborhood": "Jardim Aurelia",
+        "street": "R. Sud Menucci",
+        "latitude": -22.9067722,
+        "longitude": -47.1020143,
+        "weekdays": "Quarta-feira",
+        "categories": [""]
+    },{
+        "city":"Campinas",
+        "neighborhood": "Jardim do Lago",
+        "street": "R. José Elias Jorge",
+        "latitude": -22.9333352,
+        "longitude": -47.0890077,
+        "weekdays": "Quarta-feira",
+        "categories": [""]
+    },{
+        "city":"Campinas",
+        "neighborhood": "Jardim Flamboyant",
+        "street": "R. Presidente Prudente",
+        "latitude": -22.8803631,
+        "longitude": -47.0370284,
+        "weekdays": "Quarta-feira",
+        "categories": [""]
+    },{
+        "city":"Campinas",
+        "neighborhood": "Jardim Garcia",
+        "street": "Av. Transamaôzica",
+        "latitude": -22.9069963,
+        "longitude": -47.1160406,
+        "weekdays": "Quarta-feira",
+        "categories": [""]
+    },{
+        "city":"Campinas",
+        "neighborhood": "Jardim Guanabara",
+        "street": "R. Frei Antonio de Pádua",
+        "latitude": -22.8849297,
+        "longitude": -47.068454,
+        "weekdays": "Quarta-feira",
+        "categories": [""]
+    },{
+        "city":"Campinas",
+        "neighborhood": "Jardim Santa Genebra",
+        "street": "Av. Pamplona",
+        "latitude": -22.84972812206714,
+        "longitude": -47.070022258183535,
+        "weekdays": "Quarta-feira",
+        "categories": [""]
+    },{
+        "city":"Campinas",
+        "neighborhood": "Jardim Santana",
+        "street": "R. Francisco de Carvalho",
+        "latitude": -22.9666372,
+        "longitude": -47.1616395,
+        "weekdays": "Quarta-feira",
+        "categories": [""]
+    },{
+        "city":"Campinas",
+        "neighborhood": "Ouro Verde",
+        "street": "Avenida Suassuna",
+        "latitude": -22.9663701,
+        "longitude": -47.1309075,
+        "weekdays": "Quarta-feira",
+        "categories": [""]
+    },{
+        "city":"Campinas",
+        "neighborhood": "Ponte Preta",
+        "street": "R. General Setembrino de Carvalho",
+        "latitude": -22.91871859958475,
+        "longitude": -47.056635865725916,
+        "weekdays": "Quarta-feira",
+        "categories": [""]
+    },{
+        "city":"Campinas",
+        "neighborhood": "Vila Carminha",
+        "street": "R. Joaquim Duarte Barbosa",
+        "latitude": -22.93471,
+        "longitude": -47.036494,
+        "weekdays": "Quarta-feira",
+        "categories": [""]
+    },{
+        "city":"Campinas",
+        "neighborhood": "Vila Padre Anchieta",
+        "street": "Av. Cardeal Dom Agnelo Rossi",
+        "latitude": -22.860837,
+        "longitude": -47.154774,
+        "weekdays": "Quarta-feira",
+        "categories": [""]
+    },{
+        "city":"Campinas",
+        "neighborhood": "Vila Teixeira",
+        "street": "R. Cadete João Teixeira",
+        "latitude": -22.907840,
+        "longitude": -47.0831442,
+        "weekdays": "Quarta-feira",
+        "categories": [""]
+    },{
+        "city":"Campinas",
+        "neighborhood": "Cambuí",
+        "street": "R. Capitão Francisco de Paula",
+        "latitude": -22.8900236,
+        "longitude": -47.0510319,
+        "weekdays": "Quinta-feira",
+        "categories": [""]
+    },{
+        "city":"Campinas",
+        "neighborhood": "Vila Amoreiras",
+        "street": "R. Antonio Mingoni",
+        "latitude": -22.9564773,
+        "longitude": -47.1030495,
+        "weekdays": "Quinta-feira",
+        "categories": [""]
+    },{
+        "city":"Campinas",
+        "neighborhood": "Guarani",
+        "street": "Praça Emílio Porto",
+        "latitude": -22.8808647,
+        "longitude": -46.9656741,
+        "weekdays": "Quinta-feira",
+        "categories": [""]
+    },{
+        "city":"Campinas",
+        "neighborhood": "Jardim América",
+        "street": "R. Angelino Gregório",
+        "latitude": -22.8221094,
+        "longitude": -47.092043,
+        "weekdays": "Quinta-feira",
+        "categories": [""]
+    },{
+        "city":"Campinas",
+         "neighborhood": "Jardim Chapadão",
+         "street": "R. Prof. Jorge Nogueira Ferraz",
+         "latitude": -22.8953168,
+         "longitude": -47.0833835,
+         "weekdays": "Quinta-feira",
+         "categories": [""]
+    },{
+        "city":"Campinas",
+        "neighborhood": "Jardim das Oliveiras",
+        "street": "R. Pompeu Carvalho de Moura",
+        "latitude": -22.9301291,
+        "longitude": -47.0509364,
+        "weekdays": "Quinta-feira",
+        "categories": [""]
+    },{
+        "city":"Campinas",
+        "neighborhood": "Jardim do Trevo",
+        "street": "Jardim Proença",
+        "latitude": -22.918811,
+        "longitude": -47.0441798,
+        "weekdays": "Quinta-feira",
+        "categories": [""]
+    },{
+        "city":"Campinas",
+        "neighborhood": "Parque Taquaral",
+        "street": "R. Dom Bosco",
+        "latitude": -22.8840447,
+        "longitude": -47.0569489,
+        "weekdays": "Quinta-feira",
+        "categories": [""]
+    },{
+        "city":"Campinas",
+        "neighborhood": "Souzas",
+        "street": "R. Monsenhor Emílio José Salim",
+        "latitude": -22.879102,
+        "longitude": -46.965534,
+        "weekdays": "Quinta-feira",
+        "categories": [""]
+    },{
+        "city":"Campinas",
+        "neighborhood": "Vila Campos Sales",
+        "street": "R. Santa Cruz do Rio Pardo",
+        "latitude": -22.9398399,
+        "longitude": -47.0523611,
+        "weekdays": "Quinta-feira",
+        "categories": [""]
+    },{
+        "city":"Campinas",
+        "neighborhood": "Vila Industrial",
+        "street": "R. 24 de maio",
+        "latitude": -22.87200125668798,
+        "longitude": -47.139704095611755,
+        "weekdays": "Quinta-feira",
+        "categories": [""]
+    },{
+        "city":"Campinas",
+        "neighborhood": "Vila Pompeia",
+        "street": "R. Mineiros do Tietê",
+        "latitude": -22.9276148,
+        "longitude": -47.0894218,
+        "weekdays": "Quinta-feira",
+        "categories": [""]
+    },{
+        "city":"Campinas",
+        "neighborhood": "Bosque",
+        "street": "Av. General Macondes Salgado",
+        "latitude": -22.9075451,
+        "longitude": -47.0505205,
+        "weekdays": "Sexta-feira",
+        "categories": [""]
+    },{
+        "city":"Campinas",
+        "neighborhood": "Botafogo",
+        "street": "R. Cesário Motta",
+        "latitude": -22.8984967,
+        "longitude": -47.0741516,
+        "weekdays": "Sexta-feira",
+        "categories": [""]
+    },{
+        "city":"Campinas",
+        "neighborhood": "Castelo",
+        "street": "R. Alferes João José",
+        "latitude": -22.8861024,
+        "longitude": -47.0781436,
+        "weekdays": "Sexta-feira",
+        "categories": [""]
+    },{
+        "city":"Campinas",
+        "neighborhood": "Jardim Dom Nery",
+        "street": "R. Dois Córregos",
+        "latitude": -22.9171892,
+        "longitude": -47.0925397,
+        "weekdays": "Sexta-feira",
+        "categories": [""]
+    },{
+        "city":"Campinas",
+        "neighborhood": "Jardim Eulina",
+        "street": "Av. Papa João 23",
+        "latitude": -22.891435127970766,
+        "longitude": -47.10584157488657,
+        "weekdays": "Sexta-feira",
+        "categories": [""]
+    },{
+        "city":"Campinas",
+        "neighborhood": "Jardim Nova Europa",
+        "street": "Av. Estados Unidos",
+        "latitude": -22.9293372812921,
+        "longitude": -47.06269039016381,
+        "weekdays": "Sexta-feira",
+        "categories": [""]
+    },{
+        "city":"Campinas",
+        "neighborhood": "Jardim Novo Chapadão",
+        "street": "R. Reinaldo Laubenstein",
+        "latitude": -22.8897746,
+        "longitude": -47.0963447,
+        "weekdays": "Sexta-feira",
+        "categories": [""]
+    },{
+        "city":"Campinas",
+        "neighborhood": "Jadim Pauliceia",
+        "street": "R. Monsenhor Emílio José Salim",
+        "latitude": -22.917032,
+        "longitude": -47.1023395,
+        "weekdays": "Sexta-feira",
+        "categories": [""]
+    },{
+        "city":"Campinas",
+        "neighborhood": "Lago do Café",
+        "street": "R. Jorge Figueiredo Correa",
+        "latitude": -22.8562064,
+        "longitude": -47.0457027,
+        "weekdays": "Sexta-feira",
+        "categories": [""]
+    },{
+        "city":"Campinas",
+        "neighborhood": "Residencial Swiss Park",
+        "street": "R. Lázaro Marcheto",
+        "latitude": -22.962643767828396,
+        "longitude": -47.07074924656229,
+        "weekdays": "Sexta-feira",
+        "categories": [""]
+    },{
+        "city":"Campinas",
+        "neighborhood": "Vila Mimosa",
+        "street": "R. das Rosas",
+        "latitude": -22.9416693,
+        "longitude": -47.0912475,
+        "weekdays": "Sexta-feira",
+        "categories": [""]
+    },{
+        "city":"Campinas",
+        "neighborhood": "Vila Padre Manoel da Nóbrega",
+        "street": "R. Jaó",
+        "latitude": -22.9089671,
+        "longitude": -47.1156694,
+        "weekdays": "Sexta-feira",
+        "categories": [""]
+    },{
+        "city":"Campinas",
+        "neighborhood": "Cambuí",
+        "street": "R. Maria Monteiro",
+        "latitude": -22.8884847,
+        "longitude": -47.0537959,
+        "weekdays": "Sábado",
+        "categories": [""]
+    },{
+        "city":"Campinas",
+        "neighborhood": "DIC II",
+        "street": "R. Moyses Strachman",
+        "latitude": -22.9747649,
+        "longitude": -47.1182847,
+        "weekdays": "Sábado",
+        "categories": [""]
+    },{
+        "city":"Campinas",
+        "neighborhood": "Jardim Santa Monica",
+        "street": "R. Pedro G. Fernandes",
+        "latitude": -22.8529026,
+        "longitude": -47.1085519,
+        "weekdays": "Sábado",
+        "categories": [""]
+    },{
+        "city":"Campinas",
+        "neighborhood": "Taquaral",
+        "street": "R. Leonardo da Vinci",
+        "latitude": -22.8736368,
+        "longitude": -47.038434,
+        "weekdays": "Sábado",
+        "categories": [""]
+    },{
+        "city":"Campinas",
+        "neighborhood": "Vila Industrial",
+        "street": "R. Francisco de Assis Pupo",
+        "latitude": -22.9094563,
+        "longitude": -47.084394,
+        "weekdays": "Sábado",
+        "categories": [""]
+    },{
+        "city":"Campinas",
+        "neighborhood": "Vila Lemos",
+        "street": "R. Frei José do Monte Carmelo",
+        "latitude": -22.914675,
+        "longitude": -47.0514541,
+        "weekdays": "Sábado",
+        "categories": [""]
+    },{
+        "city":"Campinas",
+        "neighborhood": "Vila Nova",
+        "street": "R. Ramal Funilense",
+        "latitude": -22.876278435041073,
+        "longitude": -47.06773821553366,
+        "weekdays": "Sábado",
+        "categories": [""]
+    },{
+        "city":"Campinas",
+        "neighborhood": "Vila Padre Anchieta",
+        "street": "R. Cardel Dom Agnelo Rossi",
+        "latitude": -22.860975,
+        "longitude": -47.154588,
+        "weekdays": "Sábado",
+        "categories": [""]
+    },{
+        "city":"Campinas",
+        "neighborhood": "Vila Perceu Leite de Barros",
+        "street": "Av. Brasília",
+        "latitude": -22.921456427755007,
+        "longitude": -47.114831672417075,
+        "weekdays": "Sábado",
+        "categories": [""]
+    },{
+        "city":"Campinas",
+        "neighborhood": "Vila União",
+        "street": "R. Rubens Roberto Ciolfi",
+        "latitude": -22.9408397,
+        "longitude": -47.1203921,
+        "weekdays": "Sábado",
+        "categories": [""]
+    },{
+        "city":"Campinas",
+        "neighborhood": "Barão Geraldo",
+        "street": "R. Nura Mussi Camargo Penteado",
+        "latitude": -22.831575,
+        "longitude": -47.0789219,
+        "weekdays": "Domingo",
+        "categories": [""]
+    },{
+        "city":"Campinas",
+        "neighborhood": "Jardim Campos Elíseos",
+        "street": "Av. das Amoreiras (Tancredão)",
+        "latitude": -22.9149847,
+        "longitude": -47.0671272,
+        "weekdays": "Domingo",
+        "categories": [""]
+    },{
+        "city":"Campinas",
+        "neighborhood": "Jardim Monte Cristo",
+        "street": "Av. Carlos Stella Neto",
+        "latitude": -22.9368496,
+        "longitude": -47.0839733,
+        "weekdays": "Domingo",
+        "categories": [""]
+    },{
+        "city":"Campinas",
+        "neighborhood": "Jardim São Marcos",
+        "street": "R. José Linhares",
+        "latitude": -22.848357,
+        "longitude": -47.1129145,
+        "weekdays": "Domingo",
+        "categories": [""]
+    },{
+        "city":"Campinas",
+        "neighborhood": "Jardim São Pedro",
+        "street": "R. José Bento de Assis",
+        "latitude": -22.9336302,
+        "longitude": -47.0242001,
+        "weekdays": "Domingo",
+        "categories": [""]
+    },{
+        "city":"Campinas",
+        "neighborhood": "Jardim Vista Alegre",
+        "street": "R. Irmante Lucarelli",
+        "latitude": -22.9689573,
+        "longitude": -47.1473074,
+        "weekdays": "Domingo",
+        "categories": [""]
+    },{
+        "city":"Campinas",
+        "neighborhood": "Parque Dom Pedro II",
+        "street": "R. Coicyara",
+        "latitude": -22.9208208,
+        "longitude": -47.018853,
+        "weekdays": "Domingo",
+        "categories": [""]
+    },{
+        "city":"Campinas",
+        "neighborhood": "Ponte Preta",
+        "street": "R. Uruguaiana",
+        "latitude": -22.9090177,
+        "longitude": -47.0453638,
+        "weekdays": "Domingo",
+        "categories": [""]
+    },{
+        "city":"Campinas",
+        "neighborhood": "Residencial São José",
+        "street": "R. José Sebastião Nápole",
+        "latitude": -22.9634586,
+        "longitude": -47.1647962,
+        "weekdays": "Domingo",
+        "categories": [""]
+    },{
+        "city":"Campinas",
+        "neighborhood": "Souzas",
+        "street": "R. Conselheiro Antônio Prado",
+        "latitude": -22.8765362,
+        "longitude": -47.0706791,
+        "weekdays": "Domingo",
+        "categories": [""]
+    },{
+        "city":"Campinas",
+        "neighborhood": "Souzas/ Vila Santana",
+        "street": "R. da Julia Conceição Alves",
+        "latitude": -22.890319524783,
+        "longitude": -46.98414417582231,
+        "weekdays": "Domingo",
+        "categories": [""]
+    },{
+        "city":"Campinas",
+        "neighborhood": "São Bernardo",
+        "street": "R. Rio de Janeiro",
+        "latitude": -22.9158691,
+        "longitude": -47.0797283,
+        "weekdays": "Domingo",
+        "categories": [""]
+    },{
+        "city":"Campinas",
+        "neighborhood": "Vila 31 de março",
+        "street": "R. Martinho Nogueira",
+        "latitude": -22.8751637,
+        "longitude": -47.0257718,
+        "weekdays": "Domingo",
+        "categories": [""]
+    },{
+        "city":"Campinas",
+        "neighborhood": "Vila Aeroporto",
+        "street": " Av. Jacaúna",
+        "latitude": -22.9710788,
+        "longitude": -47.111225,
+        "weekdays": "Domingo",
+        "categories": [""]
+    },{
+        "city":"Campinas",
+        "neighborhood": "Vila Boa Vista",
+        "street": "R. dos Ypês Roxos",
+        "latitude": -22.8869909,
+        "longitude": -47.1213976,
+        "weekdays": "Domingo",
+        "categories": [""]
+    },{
+        "city":"Campinas",
+        "neighborhood": "Vila Castelo Branco",
+        "street": "R. Professora Sophia Valter Salgado",
+        "latitude": -22.9143497,
+        "longitude": -47.1093694,
+        "weekdays": "Domingo",
+        "categories": [""]
+    },{
+        "city":"Campinas",
+        "neighborhood": "Vila Marieta",
+        "street": "R. Doutos Betim",
+        "longitude": -22.9224603,
+        "latitude": -47.0504864,
+        "weekdays": "Domingo",
+        "categories": [""]
+    },{
+        "city":"Campinas",
+        "neighborhood": "Vila Oroximbo Maia",
+        "street": "R. Praia do Flamengo",
+        "latitude": -22.9224154,
+        "longitude": -47.0276089,
+        "weekdays": "Domingo",
+        "categories": [""]
+    }
+]
