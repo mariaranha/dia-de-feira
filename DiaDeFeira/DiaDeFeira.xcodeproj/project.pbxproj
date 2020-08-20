@@ -7,10 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2F224EE524EEAEFE006991C7 /* MarketAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F224EE424EEAEFE006991C7 /* MarketAnnotationView.swift */; };
 		0B94CF0924EACFA7001C6960 /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B94CF0724EACFA7001C6960 /* CardViewController.swift */; };
 		0B94CF0A24EACFA7001C6960 /* CardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B94CF0824EACFA7001C6960 /* CardViewController.xib */; };
 		0B94CF0C24EAD4C9001C6960 /* VerticalButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B94CF0B24EAD4C9001C6960 /* VerticalButton.swift */; };
 		2F3FA51424EAB0A500F56EC7 /* feiras-sp.json in Resources */ = {isa = PBXBuildFile; fileRef = 2F3FA51324EAB0A500F56EC7 /* feiras-sp.json */; };
+		2F3FA51724EAD09700F56EC7 /* MarketModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3FA51624EAD09700F56EC7 /* MarketModel.swift */; };
+		2F3FA51924EAD18B00F56EC7 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3FA51824EAD18B00F56EC7 /* Constants.swift */; };
 		9C6743C723CCA0F200B1ECA8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6743C623CCA0F200B1ECA8 /* AppDelegate.swift */; };
 		9C6743C923CCA0F200B1ECA8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6743C823CCA0F200B1ECA8 /* SceneDelegate.swift */; };
 		9C6743CB23CCA0F200B1ECA8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6743CA23CCA0F200B1ECA8 /* HomeViewController.swift */; };
@@ -23,7 +26,10 @@
 		0B94CF0724EACFA7001C6960 /* CardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
 		0B94CF0824EACFA7001C6960 /* CardViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardViewController.xib; sourceTree = "<group>"; };
 		0B94CF0B24EAD4C9001C6960 /* VerticalButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalButton.swift; sourceTree = "<group>"; };
+		2F224EE424EEAEFE006991C7 /* MarketAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketAnnotationView.swift; sourceTree = "<group>"; };
 		2F3FA51324EAB0A500F56EC7 /* feiras-sp.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "feiras-sp.json"; sourceTree = "<group>"; };
+		2F3FA51624EAD09700F56EC7 /* MarketModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketModel.swift; sourceTree = "<group>"; };
+		2F3FA51824EAD18B00F56EC7 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		9C6743C323CCA0F200B1ECA8 /* DiaDeFeira.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DiaDeFeira.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C6743C623CCA0F200B1ECA8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9C6743C823CCA0F200B1ECA8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -45,6 +51,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2F224EE624EEB0DF006991C7 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9C6743CF23CCA0F300B1ECA8 /* Assets.xcassets */,
+				2F3FA51824EAD18B00F56EC7 /* Constants.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		2F3FA51524EAD07600F56EC7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2F3FA51624EAD09700F56EC7 /* MarketModel.swift */,
+				2F224EE424EEAEFE006991C7 /* MarketAnnotationView.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		9C6743BA23CCA0F200B1ECA8 = {
 			isa = PBXGroup;
 			children = (
@@ -64,14 +88,15 @@
 		9C6743C523CCA0F200B1ECA8 /* DiaDeFeira */ = {
 			isa = PBXGroup;
 			children = (
+				2F3FA51524EAD07600F56EC7 /* Model */,
 				9C6F1D972420FB0C00D3648A /* Card */,
 				9C6F1D962420FB0300D3648A /* Home */,
 				9C6F1D952420FAF000D3648A /* Filter */,
 				9C6F1D922420F66F00D3648A /* Data */,
+				2F224EE624EEB0DF006991C7 /* Resources */,
 				9C6743C623CCA0F200B1ECA8 /* AppDelegate.swift */,
 				9C6743C823CCA0F200B1ECA8 /* SceneDelegate.swift */,
 				9C6743CC23CCA0F200B1ECA8 /* Main.storyboard */,
-				9C6743CF23CCA0F300B1ECA8 /* Assets.xcassets */,
 				9C6743D123CCA0F300B1ECA8 /* LaunchScreen.storyboard */,
 				9C6743D423CCA0F300B1ECA8 /* Info.plist */,
 			);
@@ -184,8 +209,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F3FA51924EAD18B00F56EC7 /* Constants.swift in Sources */,
+				2F224EE524EEAEFE006991C7 /* MarketAnnotationView.swift in Sources */,
 				0B94CF0924EACFA7001C6960 /* CardViewController.swift in Sources */,
 				9C6743CB23CCA0F200B1ECA8 /* HomeViewController.swift in Sources */,
+				2F3FA51724EAD09700F56EC7 /* MarketModel.swift in Sources */,
 				9C6743C723CCA0F200B1ECA8 /* AppDelegate.swift in Sources */,
 				0B94CF0C24EAD4C9001C6960 /* VerticalButton.swift in Sources */,
 				9C6743C923CCA0F200B1ECA8 /* SceneDelegate.swift in Sources */,
