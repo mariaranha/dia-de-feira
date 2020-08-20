@@ -9,23 +9,32 @@
 import Foundation
 import MapKit
 
-class MarketModel: NSObject, MKAnnotation {
+/// Represents a market map annotation model
+class MarketModel: NSObject, Decodable {
     
     var city: String
     var  neighborhood: String
     var street: String
-    var coordinate: CLLocationCoordinate2D
+    var latitude: Double
+    var longitude: Double
+    var weekdays: String
+    var categories: [String]
     
-    init(city: String, neighborhood: String,
-         street: String, latitudeString: String,
-         longitudeString: String) {
+    init(city: String,
+         neighborhood: String,
+         street: String,
+         latitude: Double,
+         longitude: Double,
+         weekdays: String,
+         categories: [String]) {
         
         self.city = city
         self.neighborhood = neighborhood
         self.street = street
-        let latitude = Double(latitudeString)
-        let longitude = Double(longitudeString)
-        self.coordinate = CLLocationCoordinate2D(latitude: latitude!, longitude: longitude!)
+        self.latitude = latitude
+        self.longitude = longitude
+        self.weekdays = weekdays
+        self.categories = categories
         super.init()
     }
     

@@ -14,6 +14,7 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var mapView: MKMapView!
     
     fileprivate let locationManager = CLLocationManager()
+    var marketsArray: [MarketModel]!
     
     
     override func viewDidLoad() {
@@ -25,7 +26,11 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate {
         checkLocationPermission()
         
         locationManager.delegate = self
-
+        
+        // Registering custom annotations on mapview
+        mapView.register(MarketAnnotationView.self,
+                         forAnnotationViewWithReuseIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier)
+        addMarketsAnnotations()
     }
     
     
@@ -72,6 +77,42 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate {
     }
     
     
+    /// Loads json information and transforms it on a MarketsModel array
+    private func loadJSON() {
+        
+        do {
+            if let bundlePath = Bundle.main.path(forResource: "feiras-sp", ofType: "json") {
+                let data = try String(contentsOfFile: bundlePath).data(using: .utf8)
+                let jsonData = try JSONDecoder().decode([MarketModel].self, from: data!)
+                self.marketsArray = jsonData
+            }
+        } catch {
+            print(error)
+        }
+    }
+    
+    
+    /// Adds all markets loaded from json file to the mapview
+    func addMarketsAnnotations() {
+        
+        loadJSON()
+        
+        for market in self.marketsArray {
+            let annotation = MKPointAnnotation()
+            annotation.title = market.street
+            annotation.coordinate = CLLocationCoordinate2D(latitude: market.latitude, longitude: market.longitude)
+            self.mapView.addAnnotation(annotation)
+        }
+    }
+    
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        let annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: "marketPin")
+        annotationView.image =  UIImage(named: "soccerball")
+        annotationView.canShowCallout = true
+        return annotationView
+    }
+    
+    
     // MARK: - Permissions
     func checkLocationPermission() {
         if CLLocationManager.authorizationStatus() == .authorizedWhenInUse {
@@ -83,4 +124,3 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate {
     }
 
 }
-
