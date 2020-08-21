@@ -11,8 +11,8 @@
 		2F3FA51424EAB0A500F56EC7 /* feiras-sp.json in Resources */ = {isa = PBXBuildFile; fileRef = 2F3FA51324EAB0A500F56EC7 /* feiras-sp.json */; };
 		2F3FA51724EAD09700F56EC7 /* MarketModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3FA51624EAD09700F56EC7 /* MarketModel.swift */; };
 		2F3FA51924EAD18B00F56EC7 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3FA51824EAD18B00F56EC7 /* Constants.swift */; };
-		2F927BA324F00A9100E6FD86 /* DiaDeFeiraUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F927BA224F00A9100E6FD86 /* DiaDeFeiraUITests.swift */; };
-		2F927BAD24F00CB000E6FD86 /* HelloWorld.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F927BAC24F00CB000E6FD86 /* HelloWorld.swift */; };
+		2F927BB524F027EB00E6FD86 /* DiaDeFeiraTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F927BB424F027EB00E6FD86 /* DiaDeFeiraTests.swift */; };
+		2F927BBC24F0289500E6FD86 /* HelloWorld.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F927BAC24F00CB000E6FD86 /* HelloWorld.swift */; };
 		9C6743C723CCA0F200B1ECA8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6743C623CCA0F200B1ECA8 /* AppDelegate.swift */; };
 		9C6743C923CCA0F200B1ECA8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6743C823CCA0F200B1ECA8 /* SceneDelegate.swift */; };
 		9C6743CB23CCA0F200B1ECA8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6743CA23CCA0F200B1ECA8 /* HomeViewController.swift */; };
@@ -22,7 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		2F927BA524F00A9100E6FD86 /* PBXContainerItemProxy */ = {
+		2F927BB724F027EB00E6FD86 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 9C6743BB23CCA0F200B1ECA8 /* Project object */;
 			proxyType = 1;
@@ -36,10 +36,10 @@
 		2F3FA51324EAB0A500F56EC7 /* feiras-sp.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "feiras-sp.json"; sourceTree = "<group>"; };
 		2F3FA51624EAD09700F56EC7 /* MarketModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketModel.swift; sourceTree = "<group>"; };
 		2F3FA51824EAD18B00F56EC7 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		2F927BA024F00A9100E6FD86 /* DiaDeFeiraUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DiaDeFeiraUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		2F927BA224F00A9100E6FD86 /* DiaDeFeiraUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaDeFeiraUITests.swift; sourceTree = "<group>"; };
-		2F927BA424F00A9100E6FD86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2F927BAC24F00CB000E6FD86 /* HelloWorld.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloWorld.swift; sourceTree = "<group>"; };
+		2F927BB224F027EB00E6FD86 /* DiaDeFeiraTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DiaDeFeiraTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2F927BB424F027EB00E6FD86 /* DiaDeFeiraTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaDeFeiraTests.swift; sourceTree = "<group>"; };
+		2F927BB624F027EB00E6FD86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9C6743C323CCA0F200B1ECA8 /* DiaDeFeira.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DiaDeFeira.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C6743C623CCA0F200B1ECA8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9C6743C823CCA0F200B1ECA8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -51,7 +51,7 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		2F927B9D24F00A9100E6FD86 /* Frameworks */ = {
+		2F927BAF24F027EB00E6FD86 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -86,21 +86,21 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		2F927BA124F00A9100E6FD86 /* DiaDeFeiraUITests */ = {
+		2F927BB324F027EB00E6FD86 /* DiaDeFeiraTests */ = {
 			isa = PBXGroup;
 			children = (
-				2F927BA224F00A9100E6FD86 /* DiaDeFeiraUITests.swift */,
-				2F927BA424F00A9100E6FD86 /* Info.plist */,
+				2F927BB424F027EB00E6FD86 /* DiaDeFeiraTests.swift */,
 				2F927BAC24F00CB000E6FD86 /* HelloWorld.swift */,
+				2F927BB624F027EB00E6FD86 /* Info.plist */,
 			);
-			path = DiaDeFeiraUITests;
+			path = DiaDeFeiraTests;
 			sourceTree = "<group>";
 		};
 		9C6743BA23CCA0F200B1ECA8 = {
 			isa = PBXGroup;
 			children = (
 				9C6743C523CCA0F200B1ECA8 /* DiaDeFeira */,
-				2F927BA124F00A9100E6FD86 /* DiaDeFeiraUITests */,
+				2F927BB324F027EB00E6FD86 /* DiaDeFeiraTests */,
 				9C6743C423CCA0F200B1ECA8 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -109,7 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				9C6743C323CCA0F200B1ECA8 /* DiaDeFeira.app */,
-				2F927BA024F00A9100E6FD86 /* DiaDeFeiraUITests.xctest */,
+				2F927BB224F027EB00E6FD86 /* DiaDeFeiraTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -165,23 +165,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		2F927B9F24F00A9100E6FD86 /* DiaDeFeiraUITests */ = {
+		2F927BB124F027EB00E6FD86 /* DiaDeFeiraTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2F927BA924F00A9100E6FD86 /* Build configuration list for PBXNativeTarget "DiaDeFeiraUITests" */;
+			buildConfigurationList = 2F927BB924F027EB00E6FD86 /* Build configuration list for PBXNativeTarget "DiaDeFeiraTests" */;
 			buildPhases = (
-				2F927B9C24F00A9100E6FD86 /* Sources */,
-				2F927B9D24F00A9100E6FD86 /* Frameworks */,
-				2F927B9E24F00A9100E6FD86 /* Resources */,
+				2F927BAE24F027EB00E6FD86 /* Sources */,
+				2F927BAF24F027EB00E6FD86 /* Frameworks */,
+				2F927BB024F027EB00E6FD86 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				2F927BA624F00A9100E6FD86 /* PBXTargetDependency */,
+				2F927BB824F027EB00E6FD86 /* PBXTargetDependency */,
 			);
-			name = DiaDeFeiraUITests;
-			productName = DiaDeFeiraUITests;
-			productReference = 2F927BA024F00A9100E6FD86 /* DiaDeFeiraUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
+			name = DiaDeFeiraTests;
+			productName = DiaDeFeiraTests;
+			productReference = 2F927BB224F027EB00E6FD86 /* DiaDeFeiraTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		9C6743C223CCA0F200B1ECA8 /* DiaDeFeira */ = {
 			isa = PBXNativeTarget;
@@ -210,7 +210,7 @@
 				LastUpgradeCheck = 1120;
 				ORGANIZATIONNAME = "Marina Miranda Aranha";
 				TargetAttributes = {
-					2F927B9F24F00A9100E6FD86 = {
+					2F927BB124F027EB00E6FD86 = {
 						CreatedOnToolsVersion = 11.6;
 						TestTargetID = 9C6743C223CCA0F200B1ECA8;
 					};
@@ -233,13 +233,13 @@
 			projectRoot = "";
 			targets = (
 				9C6743C223CCA0F200B1ECA8 /* DiaDeFeira */,
-				2F927B9F24F00A9100E6FD86 /* DiaDeFeiraUITests */,
+				2F927BB124F027EB00E6FD86 /* DiaDeFeiraTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		2F927B9E24F00A9100E6FD86 /* Resources */ = {
+		2F927BB024F027EB00E6FD86 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -260,12 +260,12 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		2F927B9C24F00A9100E6FD86 /* Sources */ = {
+		2F927BAE24F027EB00E6FD86 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2F927BA324F00A9100E6FD86 /* DiaDeFeiraUITests.swift in Sources */,
-				2F927BAD24F00CB000E6FD86 /* HelloWorld.swift in Sources */,
+				2F927BB524F027EB00E6FD86 /* DiaDeFeiraTests.swift in Sources */,
+				2F927BBC24F0289500E6FD86 /* HelloWorld.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,10 +285,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		2F927BA624F00A9100E6FD86 /* PBXTargetDependency */ = {
+		2F927BB824F027EB00E6FD86 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 9C6743C223CCA0F200B1ECA8 /* DiaDeFeira */;
-			targetProxy = 2F927BA524F00A9100E6FD86 /* PBXContainerItemProxy */;
+			targetProxy = 2F927BB724F027EB00E6FD86 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -312,43 +312,45 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		2F927BA724F00A9100E6FD86 /* Debug */ = {
+		2F927BBA24F027EB00E6FD86 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VZ4Y7Q4FJ2;
-				INFOPLIST_FILE = DiaDeFeiraUITests/Info.plist;
+				INFOPLIST_FILE = DiaDeFeiraTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.marina.DiaDeFeira.DiaDeFeiraUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.marina.DiaDeFeira.DiaDeFeiraTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = DiaDeFeira;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DiaDeFeira.app/DiaDeFeira";
 			};
 			name = Debug;
 		};
-		2F927BA824F00A9100E6FD86 /* Release */ = {
+		2F927BBB24F027EB00E6FD86 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VZ4Y7Q4FJ2;
-				INFOPLIST_FILE = DiaDeFeiraUITests/Info.plist;
+				INFOPLIST_FILE = DiaDeFeiraTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.marina.DiaDeFeira.DiaDeFeiraUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.marina.DiaDeFeira.DiaDeFeiraTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = DiaDeFeira;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DiaDeFeira.app/DiaDeFeira";
 			};
 			name = Release;
 		};
@@ -505,11 +507,11 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2F927BA924F00A9100E6FD86 /* Build configuration list for PBXNativeTarget "DiaDeFeiraUITests" */ = {
+		2F927BB924F027EB00E6FD86 /* Build configuration list for PBXNativeTarget "DiaDeFeiraTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2F927BA724F00A9100E6FD86 /* Debug */,
-				2F927BA824F00A9100E6FD86 /* Release */,
+				2F927BBA24F027EB00E6FD86 /* Debug */,
+				2F927BBB24F027EB00E6FD86 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
