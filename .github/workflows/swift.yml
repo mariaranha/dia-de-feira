@@ -5,7 +5,7 @@ on:
    branches:
      — develop
      — master
-     - gitWorkflow
+     — gitWorkflow
 jobs:
  test:
    name: Unit Tests
