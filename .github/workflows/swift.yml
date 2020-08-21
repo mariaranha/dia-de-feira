@@ -14,8 +14,6 @@ jobs:
        matrix:
          destination: ['platform=iOS Simulator,OS=13.3,name=iPhone 11']
    steps:
-     — name: Checkout
-       uses: actions/checkout@master
      — name: Select Xcode 11.3
        run: sudo xcode-select -s /Applications/Xcode_11.3.app
      — name: Run tests
