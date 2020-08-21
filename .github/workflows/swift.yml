@@ -1,19 +1,26 @@
-name: Swift
-
+name: Dia de Feira 
 on:
-  push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
-
+ pull_request:
+ push:
+   branches:
+     — develop
+     — master
+     - gitWorkflow
 jobs:
-  build:
-
-    runs-on: macos-latest
-
-    steps:
-    - uses: actions/checkout@v2
-    - name: Build
-      run: swift build -v
-    - name: Run tests
-      run: swift test -v
+ test:
+   name: Unit Tests
+   runs-on: macOS-latest
+   strategy:
+       matrix:
+         destination: ['platform=iOS Simulator,OS=13.3,name=iPhone 11']
+   steps:
+     — name: Checkout
+       uses: actions/checkout@master
+     — name: Select Xcode 11.3
+       run: sudo xcode-select -s /Applications/Xcode_11.3.app
+     — name: Run tests
+       run: |
+         xcodebuild clean test -project DiaDeFeira.xcodeproj -scheme  DiaDeFeira -destination "${destination}" CODE_SIGN_IDENTITY=”” CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO
+         bash <(curl -s https://codecov.io/bash)
+       env: 
+        destination: ${{ matrix.destination }}
