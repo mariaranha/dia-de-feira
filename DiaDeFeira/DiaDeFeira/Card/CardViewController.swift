@@ -24,13 +24,18 @@ class CardViewController: UIViewController {
     @IBOutlet weak var routeButton: VerticalButton!
     @IBOutlet weak var favoriteButton: VerticalButton!
     
+    weak var closeDelegate: CloseMarketCard?
+    
+    let interactor = CardViewInteractor()
+    let homeViewController = HomeViewController()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         //Setup static labels
         weekDaysTitle.text = "Dias da semana"
         addressTitle.text = "Endereço"
-        routeButton.titleLabel?.text = "Rota"
+        routeButton.setTitle("Rota", for: .normal)
     }
     
     func configureCard(cardModel: CardViewPresenter.CardViewModel) {
@@ -40,6 +45,10 @@ class CardViewController: UIViewController {
         street.text = cardModel.street
         neighborhood.text = cardModel.neighborhood
         city.text = cardModel.city
+    }
+    
+    @IBAction func closeButtonTapped(_ sender: UIButton) {
+        self.closeDelegate?.handleDismiss(closeButtonTapped: true)
     }
 
 }

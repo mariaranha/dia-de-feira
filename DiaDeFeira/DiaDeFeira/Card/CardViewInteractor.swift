@@ -10,7 +10,6 @@ import Foundation
 import UIKit
 
 class CardViewInteractor {
-    
     //Calculate Market Distance
     func haversineDinstance(la1: Double, lo1: Double, la2: Double, lo2: Double) -> Double {
         
@@ -36,6 +35,29 @@ class CardViewInteractor {
         }
         
         return radius * ahaversin(haversin(latitude2 - latitude1) + cos(latitude1) * cos(latitude2) * haversin(longitude2 - longitude1))
+    }
+    
+    @objc func handleDismiss(closeButtonTapped: Bool, homeView: HomeViewController) {
+        let cardViewController = CardViewController()
+
+        //Back to not expanded card if close button tapped
+        if closeButtonTapped == true && homeView.viewLauncherCard != nil {
+            cardViewController.view.frame = CGRect(x: 0,
+                                                   y: homeView.view.frame.height - homeView.cardHandleAreaHeight,
+                                                   width: homeView.view.bounds.width,
+                                                   height: homeView.cardHeight)
+        }
+
+        if homeView.viewLauncherCard != nil {
+            homeView.viewLauncherCard.removeFromSuperview()
+        }
+
+        //Remove selection from a pin
+        let selectedPins = homeView.mapView.selectedAnnotations
+
+        for pin in selectedPins {
+            homeView.mapView.deselectAnnotation(pin, animated: true)
+        }
     }
 
 }
