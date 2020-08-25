@@ -133,8 +133,8 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate, MKMapView
     }
     
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-        let annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: "marketPin")
-        annotationView.image =  UIImage(named: "soccerball")
+        let annotationView = MarketAnnotationView()
+        annotationView.image =  UIImage(named: "marketAnnotation")
         annotationView.canShowCallout = true
         return annotationView
     }
