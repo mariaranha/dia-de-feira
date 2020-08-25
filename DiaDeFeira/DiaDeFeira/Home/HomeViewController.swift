@@ -9,7 +9,7 @@
 import UIKit
 import MapKit
 
-class HomeViewController: UIViewController, CLLocationManagerDelegate {
+class HomeViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
 
     @IBOutlet weak var mapView: MKMapView!
     
@@ -22,7 +22,11 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate {
         case collapsed
     }
     
+    var cardViewPresenter = CardViewPresenter()
+    var cardViewInteractor: CardViewInteractor!
     var cardViewController: CardViewController!
+    
+    let blackView = UIView()
     let cardHandleAreaHeight: CGFloat = 140
     let cardHeight: CGFloat = 340
     
@@ -48,6 +52,7 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate {
         checkLocationPermission()
         
         locationManager.delegate = self
+        mapView.delegate = self
         
         // Registering custom annotations on mapview
         mapView.register(MarketAnnotationView.self,
@@ -146,6 +151,7 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate {
     }
     
     // MARK: - Card
+    //Select Market
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
         
         if selectedPinCoordinate.latitude != view.annotation!.coordinate.latitude && selectedPinCoordinate.longitude != view.annotation!.coordinate.longitude &&
@@ -160,7 +166,7 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate {
             self.selectedPinCoordinate.longitude = selectedMarket[0].longitude
         }
         
-//        setUpCardInfo()
+        setUpCardInfo()
         
         //Center pin in the map
         let pinLatitude = selectedPinCoordinate.latitude
@@ -175,7 +181,41 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate {
         
     }
     
-    func setupCard() {
+    func setUpCardInfo(){
+        //creates an empty card
+        showCard()
+        
+        //Validate which market it is
+        for market in marketsArray {
+            if market.latitude == self.selectedPinCoordinate.latitude &&
+                market.longitude == self.selectedPinCoordinate.longitude {
+                
+//                let marketDistance = cardViewInteractor.haversineDinstance(la1: locationManager.location?.coordinate.latitude ?? 0,
+//                                                                           lo1: locationManager.location?.coordinate.longitude ?? 0,
+//                                                                           la2: market.latitude,
+//                                                                           lo2: market.longitude)
+                
+                let formatedCard = cardViewPresenter.formatCard(market: market, distance: 0)
+                
+                cardViewController.configureCard(cardModel: formatedCard)
+            }
+        }
+        
+    }
+    
+    func showCard() {
+        
+        if let window = UIApplication.shared.keyWindow {
+            blackView.backgroundColor = UIColor(white: 0, alpha: 0.0)
+            
+            if viewLauncherCard == nil {
+                viewLauncherCard = setupCard()
+            }
+            window.addSubview(viewLauncherCard)
+        }
+    }
+    
+    func setupCard() -> UIView {
         cardViewController = CardViewController(nibName: "CardViewController", bundle: nil)
         self.addChild(cardViewController)
         self.view.addSubview(cardViewController.view)
@@ -192,6 +232,8 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate {
         
         cardViewController.handleArea.addGestureRecognizer(tapGestureRecognizer)
         cardViewController.handleArea.addGestureRecognizer(panGestureRecognizer)
+        
+        return cardViewController.view
     }
     
     @objc func handleCardTap(recognzier:UITapGestureRecognizer) {

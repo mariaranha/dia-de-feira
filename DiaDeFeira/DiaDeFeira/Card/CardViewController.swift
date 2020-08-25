@@ -21,7 +21,6 @@ class CardViewController: UIViewController {
     @IBOutlet weak var neighborhood: UILabel!
     @IBOutlet weak var city: UILabel!
     
-    
     @IBOutlet weak var routeButton: VerticalButton!
     @IBOutlet weak var favoriteButton: VerticalButton!
     
@@ -32,6 +31,15 @@ class CardViewController: UIViewController {
         weekDaysTitle.text = "Dias da semana"
         addressTitle.text = "Endereço"
         routeButton.titleLabel?.text = "Rota"
+    }
+    
+    func configureCard(cardModel: CardViewPresenter.CardViewModel) {
+        marketName.text = cardModel.marketTitle
+        distance.text = cardModel.distance
+        weekDay.text = cardModel.weekdays
+        street.text = cardModel.street
+        neighborhood.text = cardModel.neighborhood
+        city.text = cardModel.city
     }
 
 }
