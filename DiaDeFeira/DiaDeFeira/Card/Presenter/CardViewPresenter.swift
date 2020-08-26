@@ -22,7 +22,7 @@ class CardViewPresenter {
     
     func formatCard(market: MarketModel, distance: Double) -> CardViewModel {
         let marketTitle = "Feira \(market.neighborhood)"
-        let distanceLabel = "Feira Livre \(distance)"
+        let distanceLabel = String(format: "Feira Livre %.1f km", distance)
         
         let card = CardViewModel(marketTitle: marketTitle,
                                  distance: distanceLabel,

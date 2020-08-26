@@ -13,7 +13,7 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate, MKMapView
 
     @IBOutlet weak var mapView: MKMapView!
     
-    fileprivate let locationManager = CLLocationManager()
+    let locationManager = CLLocationManager()
     var marketsArray: [MarketModel]!
     
     /// Card

@@ -13,6 +13,7 @@ class CardViewInteractor {
     //Calculate Market Distance
     func haversineDinstance(la1: Double, lo1: Double, la2: Double, lo2: Double) -> Double {
         
+        var result: Double = 0
         // Converts from degrees to radians
         let degreesToRadians = { (angle: Double) -> Double in
             return (angle / 360) * 2 * .pi
@@ -34,7 +35,10 @@ class CardViewInteractor {
             return 2*asin(sqrt(angle))
         }
         
-        return radius * ahaversin(haversin(latitude2 - latitude1) + cos(latitude1) * cos(latitude2) * haversin(longitude2 - longitude1))
+        result =  (radius * ahaversin(haversin(latitude2 - latitude1) + cos(latitude1) * cos(latitude2) * haversin(longitude2 - longitude1)))/1000
+        
+        
+        return round(result)
     }
     
     @objc func handleDismiss(closeButtonTapped: Bool, homeView: HomeViewController) {

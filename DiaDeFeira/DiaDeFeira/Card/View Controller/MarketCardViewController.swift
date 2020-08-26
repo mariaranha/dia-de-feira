@@ -58,12 +58,13 @@ extension HomeViewController: CloseMarketCard {
                 if market.latitude == self.selectedPinCoordinate.latitude &&
                     market.longitude == self.selectedPinCoordinate.longitude {
                     
-    //                let marketDistance = cardViewInteractor.haversineDinstance(la1: locationManager.location?.coordinate.latitude ?? 0,
-    //                                                                           lo1: locationManager.location?.coordinate.longitude ?? 0,
-    //                                                                           la2: market.latitude,
-    //                                                                           lo2: market.longitude)
+                    let marketDistance = cardViewInteractor.haversineDinstance(la1: locationManager.location?.coordinate.latitude ?? 0,
+                                                                               lo1: locationManager.location?.coordinate.longitude ?? 0,
+                                                                               la2: market.latitude,
+                                                                               lo2: market.longitude)
                     
-                    let formatedCard = cardViewPresenter.formatCard(market: market, distance: 0)
+                    let formatedCard = cardViewPresenter.formatCard(market: market,
+                                                                    distance: marketDistance)
                     
                     cardViewController.configureCard(cardModel: formatedCard)
                 }
@@ -73,12 +74,8 @@ extension HomeViewController: CloseMarketCard {
         
         func showCard() {
             
-            if let window = UIApplication.shared.keyWindow {
-                blackView.backgroundColor = UIColor(white: 0, alpha: 0.0)
-                
-                if viewLauncherCard == nil {
-                    viewLauncherCard = setupCard()
-                }
+            if let window = UIApplication.shared.windows.first(where: { $0.isKeyWindow }) {
+                viewLauncherCard = setupCard()
                 window.addSubview(viewLauncherCard)
             }
         }
@@ -107,8 +104,6 @@ extension HomeViewController: CloseMarketCard {
         }
         
         @objc func handleDismiss(closeButtonTapped: Bool) {
-            let cardViewController = CardViewController()
-            
             //Back to not expanded card if close button tapped
             if closeButtonTapped == true && viewLauncherCard != nil {
                 cardViewController.view.frame = CGRect(x: 0,

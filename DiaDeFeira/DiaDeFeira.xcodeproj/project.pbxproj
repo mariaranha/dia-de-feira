@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		0B94CF0924EACFA7001C6960 /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B94CF0724EACFA7001C6960 /* CardViewController.swift */; };
 		0B94CF0A24EACFA7001C6960 /* CardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B94CF0824EACFA7001C6960 /* CardViewController.xib */; };
-		0B94CF0C24EAD4C9001C6960 /* VerticalButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B94CF0B24EAD4C9001C6960 /* VerticalButton.swift */; };
 		0B9F872A24F4727100D637AF /* CardViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9F872924F4727100D637AF /* CardViewPresenter.swift */; };
 		0B9F872C24F477DF00D637AF /* CardViewInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9F872B24F477DF00D637AF /* CardViewInteractor.swift */; };
 		0B9F872E24F5519B00D637AF /* MarketCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9F872D24F5519B00D637AF /* MarketCardViewController.swift */; };
@@ -28,7 +27,6 @@
 /* Begin PBXFileReference section */
 		0B94CF0724EACFA7001C6960 /* CardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
 		0B94CF0824EACFA7001C6960 /* CardViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardViewController.xib; sourceTree = "<group>"; };
-		0B94CF0B24EAD4C9001C6960 /* VerticalButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalButton.swift; sourceTree = "<group>"; };
 		0B9F872924F4727100D637AF /* CardViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewPresenter.swift; sourceTree = "<group>"; };
 		0B9F872B24F477DF00D637AF /* CardViewInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewInteractor.swift; sourceTree = "<group>"; };
 		0B9F872D24F5519B00D637AF /* MarketCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketCardViewController.swift; sourceTree = "<group>"; };
@@ -57,6 +55,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0B9F872F24F552BD00D637AF /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0B94CF0724EACFA7001C6960 /* CardViewController.swift */,
+				0B9F872D24F5519B00D637AF /* MarketCardViewController.swift */,
+				0B94CF0824EACFA7001C6960 /* CardViewController.xib */,
+			);
+			path = "View Controller";
+			sourceTree = "<group>";
+		};
+		0B9F873024F552D600D637AF /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				0B9F872B24F477DF00D637AF /* CardViewInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		0B9F873124F552E400D637AF /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				0B9F872924F4727100D637AF /* CardViewPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
 		2F224EE624EEB0DF006991C7 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -128,7 +152,6 @@
 			isa = PBXGroup;
 			children = (
 				9C6743CA23CCA0F200B1ECA8 /* HomeViewController.swift */,
-				0B9F872D24F5519B00D637AF /* MarketCardViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -136,11 +159,9 @@
 		9C6F1D972420FB0C00D3648A /* Card */ = {
 			isa = PBXGroup;
 			children = (
-				0B94CF0724EACFA7001C6960 /* CardViewController.swift */,
-				0B9F872B24F477DF00D637AF /* CardViewInteractor.swift */,
-				0B9F872924F4727100D637AF /* CardViewPresenter.swift */,
-				0B94CF0B24EAD4C9001C6960 /* VerticalButton.swift */,
-				0B94CF0824EACFA7001C6960 /* CardViewController.xib */,
+				0B9F872F24F552BD00D637AF /* View Controller */,
+				0B9F873024F552D600D637AF /* Interactor */,
+				0B9F873124F552E400D637AF /* Presenter */,
 			);
 			path = Card;
 			sourceTree = "<group>";
@@ -226,7 +247,6 @@
 				0B9F872A24F4727100D637AF /* CardViewPresenter.swift in Sources */,
 				0B9F872E24F5519B00D637AF /* MarketCardViewController.swift in Sources */,
 				9C6743C723CCA0F200B1ECA8 /* AppDelegate.swift in Sources */,
-				0B94CF0C24EAD4C9001C6960 /* VerticalButton.swift in Sources */,
 				9C6743C923CCA0F200B1ECA8 /* SceneDelegate.swift in Sources */,
 				0B9F872C24F477DF00D637AF /* CardViewInteractor.swift in Sources */,
 			);
