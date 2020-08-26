@@ -24,7 +24,8 @@ class CardViewController: UIViewController {
     @IBOutlet weak var routeButton: VerticalButton!
     @IBOutlet weak var favoriteButton: VerticalButton!
     
-    weak var closeDelegate: CloseMarketCard?
+    weak var closeDelegate: CloseCardDelegate?
+    weak var routeDelegate: RouteDelegate?
     
     let interactor = CardViewInteractor()
     let homeViewController = HomeViewController()
@@ -49,6 +50,10 @@ class CardViewController: UIViewController {
     
     @IBAction func closeButtonTapped(_ sender: UIButton) {
         self.closeDelegate?.handleDismiss(closeButtonTapped: true)
+    }
+    
+    @IBAction func routeButtonTapped(_ sender: UIButton) {
+        self.routeDelegate?.openInMaps()
     }
 
 }
