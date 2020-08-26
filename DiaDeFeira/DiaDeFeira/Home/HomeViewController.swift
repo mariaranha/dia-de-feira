@@ -9,13 +9,25 @@
 import UIKit
 import MapKit
 
-class HomeViewController: UIViewController, CLLocationManagerDelegate {
+class HomeViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
 
     @IBOutlet weak var mapView: MKMapView!
     
     fileprivate let locationManager = CLLocationManager()
     weak var searchDelegate: SearchResultDelegate?
     var searchController: UISearchController? = nil
+    var marketsArray: [MarketModel]!
+    var mapAnnotations: [MKAnnotation] = []
+    var selectedFilteredDistance: Int? = nil
+    var isDistanceFilterAplied: Bool = false
+    var isDayFilterAplied: Bool = false
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        if isDistanceFilterAplied {
+            filterDistance(distance: selectedFilteredDistance!)
+        }
+    }
     
     
     override func viewDidLoad() {
@@ -92,12 +104,13 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate {
     /// Adds all markets loaded from json file to the mapview
     func addMarketsAnnotations() {
         
-        let marketsArray: [MarketModel] = JSONManager.loadJSON()
+        self.marketsArray = JSONManager.loadJSON()
         
         for market in marketsArray {
             let annotation = MKPointAnnotation()
             annotation.title = market.street
             annotation.coordinate = CLLocationCoordinate2D(latitude: market.latitude, longitude: market.longitude)
+            self.mapAnnotations.append(annotation)
             self.mapView.addAnnotation(annotation)
         }
     }
@@ -110,6 +123,62 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate {
     }
     
     
+    // MARK: - Filter
+    func filterDistance(distance: Int) {
+        var haversineResult: Double = 0
+        self.mapView.removeAnnotations(mapAnnotations)
+        self.mapAnnotations = []
+        
+        for market in marketsArray {
+            haversineResult = haversineDinstance(userLat: locationManager.location!.coordinate.latitude,
+                                                 userLong: locationManager.location!.coordinate.longitude,
+                                                 marketLat: market.latitude,
+                                                 marketLong: market.longitude)
+            
+            if Int(haversineResult) < distance {
+                let annotation = MKPointAnnotation()
+                annotation.title = market.street
+                annotation.coordinate = CLLocationCoordinate2D(latitude: market.latitude,
+                                                               longitude: market.longitude)
+                self.mapAnnotations.append(annotation)
+                self.mapView.addAnnotation(annotation)
+            }
+        }
+    }
+    
+    
+    /// Mathematical formula to calculate distance between two coordinates
+    func haversineDinstance(userLat: Double, userLong: Double, marketLat: Double, marketLong: Double) -> Double {
+        
+        var result: Double = 0
+        // Converts from degrees to radians
+        let degreesToRadians = { (angle: Double) -> Double in
+            return (angle / 360) * 2 * .pi
+        }
+        
+        let userLatRadians = degreesToRadians(userLat)
+        let userLongRadians = degreesToRadians(userLong)
+        let markerLatRadians = degreesToRadians(marketLat)
+        let marketLongRadians = degreesToRadians(marketLong)
+        
+        // Earth radius, in meters
+        let radius: Double = 6367444.7
+        
+        let haversin = { (angle: Double) -> Double in
+            return (1 - cos(angle))/2
+        }
+        
+        let ahaversin = { (angle: Double) -> Double in
+            return 2*asin(sqrt(angle))
+        }
+        
+        result =  (radius * ahaversin(haversin(markerLatRadians - userLatRadians) + cos(userLatRadians) * cos(markerLatRadians) * haversin(marketLongRadians - userLongRadians)))/1000
+        
+        
+        return round(result)
+    }
+    
+    
     // MARK: - Permissions
     func checkLocationPermission() {
         if CLLocationManager.authorizationStatus() == .authorizedWhenInUse {
@@ -118,6 +187,12 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate {
         } else {
             locationManager.requestWhenInUseAuthorization()
         }
+    }
+    
+    
+    // MARK: - Navigation
+    
+    @IBAction func unwindFilter(_ seg: UIStoryboardSegue) {
     }
 
 }

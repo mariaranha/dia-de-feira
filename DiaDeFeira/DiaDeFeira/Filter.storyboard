@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="0iV-JH-luw">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Filter View Controller-->
+        <scene sceneID="hKW-DK-tjB">
+            <objects>
+                <viewController storyboardIdentifier="Filter" id="0iV-JH-luw" customClass="FilterViewController" customModule="DiaDeFeira" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="d6l-mu-oXV">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Distância" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P1u-7w-SPe">
+                                <rect key="frame" x="16" y="60" width="75" height="21"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uG7-Ce-mG3">
+                                <rect key="frame" x="16" y="164" width="382" height="33"/>
+                                <color key="backgroundColor" red="0.14117647058823529" green="0.54117647058823526" blue="0.23921568627450979" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <state key="normal" title="Filtrar">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="filterButton:" destination="0iV-JH-luw" eventType="touchUpInside" id="iwk-jb-P8p"/>
+                                    <segue destination="2X2-r5-CKf" kind="unwind" identifier="filterToHome" unwindAction="unwindFilter:" id="8pv-zi-UIZ"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 km" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oK0-TE-XMJ">
+                                <rect key="frame" x="16" y="89" width="382" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="1" maxValue="25" translatesAutoresizingMaskIntoConstraints="NO" id="dVD-Q3-bCc">
+                                <rect key="frame" x="14" y="118" width="386" height="31"/>
+                                <color key="tintColor" red="0.14117647058823529" green="0.54117647058823526" blue="0.23921568627450979" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="sliderValue:" destination="0iV-JH-luw" eventType="valueChanged" id="x62-SL-Tnj"/>
+                                </connections>
+                            </slider>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="pTu-ix-ZwR" firstAttribute="trailing" secondItem="dVD-Q3-bCc" secondAttribute="trailing" constant="16" id="3cl-gr-oYr"/>
+                            <constraint firstItem="dVD-Q3-bCc" firstAttribute="leading" secondItem="pTu-ix-ZwR" secondAttribute="leading" constant="16" id="45c-OD-f4m"/>
+                            <constraint firstItem="dVD-Q3-bCc" firstAttribute="top" secondItem="oK0-TE-XMJ" secondAttribute="bottom" constant="8" id="DFK-kU-wOf"/>
+                            <constraint firstItem="pTu-ix-ZwR" firstAttribute="trailing" secondItem="uG7-Ce-mG3" secondAttribute="trailing" constant="16" id="My3-1S-7BI"/>
+                            <constraint firstItem="oK0-TE-XMJ" firstAttribute="leading" secondItem="pTu-ix-ZwR" secondAttribute="leading" constant="16" id="ShR-Qy-Hz1"/>
+                            <constraint firstItem="P1u-7w-SPe" firstAttribute="top" secondItem="pTu-ix-ZwR" secondAttribute="top" constant="16" id="UW3-1h-DTa"/>
+                            <constraint firstItem="uG7-Ce-mG3" firstAttribute="top" secondItem="dVD-Q3-bCc" secondAttribute="bottom" constant="16" id="WSL-xn-zjL"/>
+                            <constraint firstItem="P1u-7w-SPe" firstAttribute="leading" secondItem="pTu-ix-ZwR" secondAttribute="leading" constant="16" id="cuA-er-Byd"/>
+                            <constraint firstItem="pTu-ix-ZwR" firstAttribute="trailing" secondItem="oK0-TE-XMJ" secondAttribute="trailing" constant="16" id="jSp-ej-s7E"/>
+                            <constraint firstItem="oK0-TE-XMJ" firstAttribute="top" secondItem="P1u-7w-SPe" secondAttribute="bottom" constant="8" id="l5H-0O-cLJ"/>
+                            <constraint firstItem="uG7-Ce-mG3" firstAttribute="leading" secondItem="pTu-ix-ZwR" secondAttribute="leading" constant="16" id="lQq-Yx-ctR"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="pTu-ix-ZwR"/>
+                    </view>
+                    <connections>
+                        <outlet property="distanceLabel" destination="oK0-TE-XMJ" id="1Bp-HB-aUR"/>
+                        <outlet property="slider" destination="dVD-Q3-bCc" id="aMB-lv-8LX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gF3-CA-duv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="2X2-r5-CKf" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="-3" y="186"/>
+        </scene>
+    </scenes>
+</document>

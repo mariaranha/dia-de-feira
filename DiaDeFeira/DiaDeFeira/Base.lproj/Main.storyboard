@@ -52,6 +52,9 @@
                                                                 <integer key="value" value="5"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <segue destination="kjr-XH-HbB" kind="show" identifier="" id="WQA-nw-Vcm"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XDB-YH-iBN">
                                                         <rect key="frame" x="68" y="0.0" width="55" height="30"/>
@@ -316,6 +319,16 @@
             </objects>
             <point key="canvasLocation" x="542" y="-18"/>
         </scene>
+        <!--Filter-->
+        <scene sceneID="xzx-kW-EFU">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="Filter" storyboardName="Filter" referencedIdentifier="Filter" id="kjr-XH-HbB" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="4UH-u3-xmd"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d8s-1z-UCV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1238" y="-18"/>
+        </scene>
         <!--Search Table View Controller-->
         <scene sceneID="l3h-xw-OXe">
             <objects>
@@ -358,7 +371,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wvc-cd-vTf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1462" y="-18"/>
+            <point key="canvasLocation" x="1616" y="-18"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Gvt-Ss-Rxe">
