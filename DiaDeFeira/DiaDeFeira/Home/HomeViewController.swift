@@ -12,6 +12,9 @@ import MapKit
 class HomeViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
 
     @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet var buttonsArray: [UIButton]!
+    @IBOutlet weak var filterButton: UIButton!
+    
     
     fileprivate let locationManager = CLLocationManager()
     weak var searchDelegate: SearchResultDelegate?
@@ -25,7 +28,16 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate, MKMapView
     
     override func viewWillAppear(_ animated: Bool) {
         if isDistanceFilterAplied {
+            clearButtonsSelections()
             filterDistance(distance: selectedFilteredDistance!)
+            filterButton.imageView?.image = UIImage(named: "barsFilterSelected")
+            filterButton.backgroundColor = AppColors.green
+        } else {
+            let allAnnotations = self.mapView.annotations
+            self.mapView.removeAnnotations(allAnnotations)
+            self.addMarketsAnnotations()
+            self.filterButton.imageView?.image = UIImage(named: "barsFilter")
+            self.filterButton.backgroundColor = .clear
         }
     }
     
@@ -34,6 +46,7 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate, MKMapView
         super.viewDidLoad()
         
         setSearchBar()
+        setFilterButtons()
         setMapButtons()
         
         checkLocationPermission()
@@ -115,6 +128,7 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate, MKMapView
         }
     }
     
+    
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         let annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: "marketPin")
         annotationView.image =  UIImage(named: "marketAnnotation")
@@ -179,6 +193,69 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate, MKMapView
     }
     
     
+    func clearButtonsSelections() {
+        for button in buttonsArray {
+            button.isSelected = false
+            button.backgroundColor = .clear
+        }
+        self.filterButton.imageView?.image = UIImage(named: "barsFilter")
+    }
+    
+    
+    @IBAction func dayFilterButtons(_ sender: UIButton) {
+        
+        clearButtonsSelections()
+        
+        sender.isSelected = !sender.isSelected
+        
+        sender.backgroundColor = AppColors.green
+        
+        var weekDay: String = ""
+               
+        switch sender.tag {
+            case 1:
+                weekDay = "Domingo"
+            case 2:
+                weekDay = "Segunda-feira"
+            case 3:
+                weekDay = "Terça-feira"
+            case 4:
+                weekDay = "Quarta-feira"
+            case 5:
+                weekDay = "Quinta-feira"
+            case 6:
+                weekDay = "Sexta-feira"
+            case 7:
+                weekDay = "Sábado"
+            default:
+                weekDay = "Todos"
+        }
+        
+        weekDayFilter(weekDay: weekDay)
+    }
+    
+    
+    func weekDayFilter(weekDay: String) {
+           
+        if weekDay == "Todos" {
+            self.addMarketsAnnotations()
+        } else {
+               
+            let allAnnotations = self.mapView.annotations
+            self.mapView.removeAnnotations(allAnnotations)
+            
+            for market in marketsArray {
+                if market.weekdays == weekDay {
+                    let annotation = MKPointAnnotation()
+                    annotation.title = market.street
+                    annotation.coordinate = CLLocationCoordinate2DMake(market.latitude, market.longitude)
+                    self.mapView.addAnnotation(annotation)
+                }
+           }
+       }
+    }
+    
+    
     // MARK: - Permissions
     func checkLocationPermission() {
         if CLLocationManager.authorizationStatus() == .authorizedWhenInUse {
@@ -191,7 +268,6 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate, MKMapView
     
     
     // MARK: - Navigation
-    
     @IBAction func unwindFilter(_ seg: UIStoryboardSegue) {
     }
 
