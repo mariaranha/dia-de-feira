@@ -15,6 +15,8 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate, MKMapView
     
     let locationManager = CLLocationManager()
     var marketsArray: [MarketModel]!
+    weak var searchDelegate: SearchResultDelegate?
+    var searchController: UISearchController? = nil
     
     /// Card
     enum CardState {
@@ -71,10 +73,21 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate, MKMapView
     
     /// Sets seachr bar into the navigation bar
     fileprivate func setSearchBar() {
-        let searchBar = UISearchBar()
-        self.navigationItem.titleView = searchBar
-        searchBar.sizeToFit()
-        searchBar.placeholder = "Buscar Feiras"
+        
+        if let resultViewController = self.storyboard?.instantiateViewController(withIdentifier:                                             "SearchController") as? SearchTableViewController {
+            
+            searchController = UISearchController(searchResultsController: resultViewController)
+            searchDelegate = resultViewController
+            searchController?.delegate = self
+            searchController?.searchResultsUpdater = self
+            searchController?.obscuresBackgroundDuringPresentation = false
+            searchController?.searchBar.placeholder = "Buscar feiras"
+            searchController?.hidesNavigationBarDuringPresentation = false
+            searchController?.searchBar.searchBarStyle = .minimal
+            searchController?.searchBar.tintColor = #colorLiteral(red: 0.1411764706, green: 0.5411764706, blue: 0.2392156863, alpha: 1)
+            navigationItem.titleView = searchController?.searchBar
+            definesPresentationContext = true
+        }
     }
     
     
@@ -104,27 +117,12 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate, MKMapView
     }
     
     
-    /// Loads json information and transforms it on a MarketsModel array
-    private func loadJSON() {
-        
-        do {
-            if let bundlePath = Bundle.main.path(forResource: "feiras-sp", ofType: "json") {
-                let data = try String(contentsOfFile: bundlePath).data(using: .utf8)
-                let jsonData = try JSONDecoder().decode([MarketModel].self, from: data!)
-                self.marketsArray = jsonData
-            }
-        } catch {
-            print(error)
-        }
-    }
-    
-    
     /// Adds all markets loaded from json file to the mapview
     func addMarketsAnnotations() {
         
-        loadJSON()
+        marketsArray = JSONManager.loadJSON()
         
-        for market in self.marketsArray {
+        for market in marketsArray {
             let annotation = MKPointAnnotation()
             annotation.title = market.street
             annotation.coordinate = CLLocationCoordinate2D(latitude: market.latitude, longitude: market.longitude)
