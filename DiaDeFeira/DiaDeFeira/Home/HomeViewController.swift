@@ -9,14 +9,41 @@
 import UIKit
 import MapKit
 
-class HomeViewController: UIViewController, CLLocationManagerDelegate {
+class HomeViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
 
     @IBOutlet weak var mapView: MKMapView!
     
-    fileprivate let locationManager = CLLocationManager()
+    let locationManager = CLLocationManager()
+    var marketsArray: [MarketModel]!
     weak var searchDelegate: SearchResultDelegate?
     var searchController: UISearchController? = nil
     
+    /// Card
+    enum CardState {
+        case expanded
+        case collapsed
+    }
+    
+    var cardViewPresenter = CardViewPresenter()
+    var cardViewInteractor = CardViewInteractor()
+    var cardViewController: CardViewController!
+    
+    let blackView = UIView()
+    let cardHandleAreaHeight: CGFloat = 140
+    let cardHeight: CGFloat = 340
+    
+    var cardVisible = false
+    
+    var nextCardState: CardState {
+        return cardVisible ? .collapsed : .expanded
+    }
+    
+    var runningAnimations = [UIViewPropertyAnimator]()
+    var animationProgressWhenInterrupted: CGFloat = 0
+    
+    var selectedPinCoordinate = CLLocationCoordinate2D()
+    var viewLauncherCard: UIView!
+    var selectedMarket: [MarketModel]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +54,7 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate {
         checkLocationPermission()
         
         locationManager.delegate = self
+        mapView.delegate = self
         
         // Registering custom annotations on mapview
         mapView.register(MarketAnnotationView.self,
@@ -92,7 +120,7 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate {
     /// Adds all markets loaded from json file to the mapview
     func addMarketsAnnotations() {
         
-        let marketsArray: [MarketModel] = JSONManager.loadJSON()
+        marketsArray = JSONManager.loadJSON()
         
         for market in marketsArray {
             let annotation = MKPointAnnotation()
@@ -103,7 +131,7 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate {
     }
     
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-        let annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: "marketPin")
+        let annotationView = MarketAnnotationView()
         annotationView.image =  UIImage(named: "marketAnnotation")
         annotationView.canShowCallout = true
         return annotationView
@@ -119,5 +147,4 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate {
             locationManager.requestWhenInUseAuthorization()
         }
     }
-
 }
