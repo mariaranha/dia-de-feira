@@ -26,6 +26,7 @@ class CardViewController: UIViewController {
     
     weak var closeDelegate: CloseCardDelegate?
     weak var routeDelegate: RouteDelegate?
+    weak var favoriteDelegate: FavoriteDelegate?
     
     let interactor = CardViewInteractor()
     let homeViewController = HomeViewController()
@@ -54,6 +55,11 @@ class CardViewController: UIViewController {
     
     @IBAction func routeButtonTapped(_ sender: UIButton) {
         self.routeDelegate?.openInMaps()
+    }
+    
+    @IBAction func favoriteButtonTapped(_ sender: UIButton) {
+        let selectedMarket = (self.favoriteDelegate?.getSelectedMarket())!
+        self.favoriteDelegate?.addOrRemoveFavorite(market: selectedMarket)
     }
 
 }

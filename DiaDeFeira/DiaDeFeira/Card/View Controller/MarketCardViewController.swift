@@ -18,7 +18,12 @@ protocol RouteDelegate: NSObjectProtocol {
     func openInMaps()
 }
 
-extension HomeViewController: CloseCardDelegate, RouteDelegate {
+protocol FavoriteDelegate: NSObjectProtocol {
+    func getSelectedMarket() -> MarketModel
+    func addOrRemoveFavorite(market: MarketModel)
+}
+
+extension HomeViewController: CloseCardDelegate, RouteDelegate, FavoriteDelegate {
     //Select Market
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
         
@@ -73,27 +78,71 @@ extension HomeViewController: CloseCardDelegate, RouteDelegate {
         mapItem.openInMaps(launchOptions: options)
     }
     
-    func setUpCardInfo(){
-        //creates an empty card
-        showCard()
+    func getSelectedMarket() -> MarketModel {
+        var selectedMarket: MarketModel!
         
-        //Validate which market it is
         for market in marketsArray {
             if market.latitude == self.selectedPinCoordinate.latitude &&
                 market.longitude == self.selectedPinCoordinate.longitude {
-                
-                let marketDistance = cardViewInteractor.haversineDinstance(la1: locationManager.location?.coordinate.latitude ?? 0,
-                                                                           lo1: locationManager.location?.coordinate.longitude ?? 0,
-                                                                           la2: market.latitude,
-                                                                           lo2: market.longitude)
-                
-                let formatedCard = cardViewPresenter.formatCard(market: market,
-                                                                distance: marketDistance)
-                
-                cardViewController.configureCard(cardModel: formatedCard)
+                selectedMarket = market
+                break
             }
         }
         
+        return selectedMarket
+    }
+    
+    func addOrRemoveFavorite(market: MarketModel) {
+        let decoded = UserDefaultsStruct.FavoriteMarkets.favorites
+        var userFavorites: [MarketModel] = []
+        var alreadyFavorite: Bool = false
+        
+         do {
+            userFavorites = try NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(decoded) as! [MarketModel]
+             
+             
+            for item in userFavorites {
+                if item.latitude == selectedPinCoordinate.latitude &&
+                    item.longitude == selectedPinCoordinate.longitude {
+                    guard let index = userFavorites.firstIndex(of: item) else { return }
+                    userFavorites.remove(at: index)
+                    
+                    alreadyFavorite = true
+                }
+            }
+            
+            if !alreadyFavorite {
+                userFavorites.append(market)
+            }
+            
+         } catch {
+             print("Error decoding user defaults data")
+         }
+         
+         do {
+             let encodedData: Data = try NSKeyedArchiver.archivedData(withRootObject: userFavorites, requiringSecureCoding: false)
+             
+             UserDefaultsStruct.FavoriteMarkets.favorites = encodedData
+         } catch {
+             print("Error encoding user defaults data")
+         }
+    }
+    
+    func setUpCardInfo() {
+        //creates an empty card
+        showCard()
+        
+        let market = getSelectedMarket()
+        let marketDistance = cardViewInteractor.haversineDinstance(la1: locationManager.location?.coordinate.latitude ?? 0,
+                                                                   lo1: locationManager.location?.coordinate.longitude ?? 0,
+                                                                   la2: market.latitude,
+                                                                   lo2: market.longitude)
+        
+        let formatedCard = cardViewPresenter.formatCard(market: market,
+                                                        distance: marketDistance)
+        
+        cardViewController.configureCard(cardModel: formatedCard)
+
     }
     
     func showCard() {
@@ -124,6 +173,7 @@ extension HomeViewController: CloseCardDelegate, RouteDelegate {
         
         cardViewController.closeDelegate = self
         cardViewController.routeDelegate = self
+        cardViewController.favoriteDelegate = self
         
         return cardViewController.view
     }

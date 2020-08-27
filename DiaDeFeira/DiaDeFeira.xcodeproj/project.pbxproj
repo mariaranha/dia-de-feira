@@ -12,6 +12,7 @@
 		0B9F872A24F4727100D637AF /* CardViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9F872924F4727100D637AF /* CardViewPresenter.swift */; };
 		0B9F872C24F477DF00D637AF /* CardViewInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9F872B24F477DF00D637AF /* CardViewInteractor.swift */; };
 		0B9F872E24F5519B00D637AF /* MarketCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9F872D24F5519B00D637AF /* MarketCardViewController.swift */; };
+		0B9F873324F6894400D637AF /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9F873224F6894400D637AF /* UserDefaults.swift */; };
 		2F224EE524EEAEFE006991C7 /* MarketAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F224EE424EEAEFE006991C7 /* MarketAnnotationView.swift */; };
 		2F3FA51424EAB0A500F56EC7 /* feiras-sp.json in Resources */ = {isa = PBXBuildFile; fileRef = 2F3FA51324EAB0A500F56EC7 /* feiras-sp.json */; };
 		2F3FA51724EAD09700F56EC7 /* MarketModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3FA51624EAD09700F56EC7 /* MarketModel.swift */; };
@@ -30,6 +31,7 @@
 		0B9F872924F4727100D637AF /* CardViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewPresenter.swift; sourceTree = "<group>"; };
 		0B9F872B24F477DF00D637AF /* CardViewInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewInteractor.swift; sourceTree = "<group>"; };
 		0B9F872D24F5519B00D637AF /* MarketCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketCardViewController.swift; sourceTree = "<group>"; };
+		0B9F873224F6894400D637AF /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
 		2F224EE424EEAEFE006991C7 /* MarketAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketAnnotationView.swift; sourceTree = "<group>"; };
 		2F3FA51324EAB0A500F56EC7 /* feiras-sp.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "feiras-sp.json"; sourceTree = "<group>"; };
 		2F3FA51624EAD09700F56EC7 /* MarketModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketModel.swift; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 				9C6F1D922420F66F00D3648A /* Data */,
 				2F224EE624EEB0DF006991C7 /* Resources */,
 				9C6743C623CCA0F200B1ECA8 /* AppDelegate.swift */,
+				0B9F873224F6894400D637AF /* UserDefaults.swift */,
 				9C6743C823CCA0F200B1ECA8 /* SceneDelegate.swift */,
 				9C6743CC23CCA0F200B1ECA8 /* Main.storyboard */,
 				9C6743D123CCA0F300B1ECA8 /* LaunchScreen.storyboard */,
@@ -242,6 +245,7 @@
 				2F3FA51924EAD18B00F56EC7 /* Constants.swift in Sources */,
 				2F224EE524EEAEFE006991C7 /* MarketAnnotationView.swift in Sources */,
 				0B94CF0924EACFA7001C6960 /* CardViewController.swift in Sources */,
+				0B9F873324F6894400D637AF /* UserDefaults.swift in Sources */,
 				9C6743CB23CCA0F200B1ECA8 /* HomeViewController.swift in Sources */,
 				2F3FA51724EAD09700F56EC7 /* MarketModel.swift in Sources */,
 				0B9F872A24F4727100D637AF /* CardViewPresenter.swift in Sources */,
