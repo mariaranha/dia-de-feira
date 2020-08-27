@@ -60,6 +60,11 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate, MKMapView
         mapView.register(MarketAnnotationView.self,
                          forAnnotationViewWithReuseIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier)
         addMarketsAnnotations()
+        
+        if let rightBarButton = navigationItem.rightBarButtonItem {
+            rightBarButton.target = self
+            rightBarButton.action = #selector(favoriteListTapped(_:))
+        }
     }
     
     
@@ -135,6 +140,15 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate, MKMapView
         annotationView.image =  UIImage(named: "marketAnnotation")
         annotationView.canShowCallout = true
         return annotationView
+    }
+    
+
+    @IBAction func favoriteListTapped(_ sender: UIBarButtonItem) {
+        if cardViewController != nil {
+            handleDismiss(closeButtonTapped: false)
+        }
+        
+        performSegue(withIdentifier: "Favorite", sender: self)
     }
     
     

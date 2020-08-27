@@ -92,26 +92,13 @@ extension HomeViewController: CloseCardDelegate, RouteDelegate, FavoriteDelegate
         return selectedMarket
     }
     
-    func getFavoritesMarkets() -> [MarketModel] {
-        var favorites: [MarketModel] = []
-        let decoded = UserDefaultsStruct.FavoriteMarkets.favorites
-        
-        //Decode
-        do {
-           favorites = try NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(decoded) as! [MarketModel]
-        } catch {
-            print("Error decoding user defaults data")
-        }
-        
-        return favorites
-    }
-    
     func addOrRemoveFavorite(market: MarketModel) {
         var userFavorites: [MarketModel] = []
         var alreadyFavorite: Bool = false
+        let favoritesWorker = FavoritesWorker()
         
         //Decode
-        userFavorites = getFavoritesMarkets()
+        userFavorites = favoritesWorker.getFavoritesMarkets()
         for item in userFavorites {
             if item.latitude == selectedPinCoordinate.latitude &&
                 item.longitude == selectedPinCoordinate.longitude {
@@ -143,6 +130,7 @@ extension HomeViewController: CloseCardDelegate, RouteDelegate, FavoriteDelegate
         //creates an empty card
         showCard()
         
+        let favoritesWorker = FavoritesWorker()
         let market = getSelectedMarket()
         let marketDistance = cardViewInteractor.haversineDinstance(la1: locationManager.location?.coordinate.latitude ?? 0,
                                                                    lo1: locationManager.location?.coordinate.longitude ?? 0,
@@ -154,7 +142,7 @@ extension HomeViewController: CloseCardDelegate, RouteDelegate, FavoriteDelegate
         
         cardViewController.configureCard(cardModel: formatedCard)
         
-        let favorites = getFavoritesMarkets()
+        let favorites = favoritesWorker.getFavoritesMarkets()
         var isFavorite: Bool = false
         for item in favorites {
             if item.latitude == market.latitude && item.longitude == market.longitude {

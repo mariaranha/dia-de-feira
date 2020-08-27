@@ -13,6 +13,11 @@
 		0B9F872C24F477DF00D637AF /* CardViewInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9F872B24F477DF00D637AF /* CardViewInteractor.swift */; };
 		0B9F872E24F5519B00D637AF /* MarketCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9F872D24F5519B00D637AF /* MarketCardViewController.swift */; };
 		0B9F873324F6894400D637AF /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9F873224F6894400D637AF /* UserDefaults.swift */; };
+		0B9F873624F81F6200D637AF /* FavoritesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9F873524F81F6200D637AF /* FavoritesTableViewController.swift */; };
+		0B9F873824F8222400D637AF /* FavoritesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9F873724F8222400D637AF /* FavoritesInteractor.swift */; };
+		0B9F873A24F822E000D637AF /* FavoritesWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9F873924F822E000D637AF /* FavoritesWorker.swift */; };
+		0B9F873C24F8243D00D637AF /* FavoritesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9F873B24F8243D00D637AF /* FavoritesPresenter.swift */; };
+		0B9F874124F8367B00D637AF /* Favorites.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B9F874024F8367B00D637AF /* Favorites.storyboard */; };
 		2F224EE524EEAEFE006991C7 /* MarketAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F224EE424EEAEFE006991C7 /* MarketAnnotationView.swift */; };
 		2F243D7424F55D8400D08000 /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F243D7324F55D8400D08000 /* SearchTableViewController.swift */; };
 		2F243D7624F562DB00D08000 /* JSONManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F243D7524F562DB00D08000 /* JSONManager.swift */; };
@@ -47,6 +52,11 @@
 		0B9F872B24F477DF00D637AF /* CardViewInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewInteractor.swift; sourceTree = "<group>"; };
 		0B9F872D24F5519B00D637AF /* MarketCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketCardViewController.swift; sourceTree = "<group>"; };
 		0B9F873224F6894400D637AF /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
+		0B9F873524F81F6200D637AF /* FavoritesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesTableViewController.swift; sourceTree = "<group>"; };
+		0B9F873724F8222400D637AF /* FavoritesInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesInteractor.swift; sourceTree = "<group>"; };
+		0B9F873924F822E000D637AF /* FavoritesWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesWorker.swift; sourceTree = "<group>"; };
+		0B9F873B24F8243D00D637AF /* FavoritesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesPresenter.swift; sourceTree = "<group>"; };
+		0B9F874024F8367B00D637AF /* Favorites.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Favorites.storyboard; sourceTree = "<group>"; };
 		2F224EE424EEAEFE006991C7 /* MarketAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketAnnotationView.swift; sourceTree = "<group>"; };
 		2F243D7324F55D8400D08000 /* SearchTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
 		2F243D7524F562DB00D08000 /* JSONManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONManager.swift; sourceTree = "<group>"; };
@@ -112,6 +122,41 @@
 			path = Presenter;
 			sourceTree = "<group>";
 		};
+		0B9F873424F81DB700D637AF /* Favorites */ = {
+			isa = PBXGroup;
+			children = (
+				0B9F873D24F82D5A00D637AF /* View Controller */,
+				0B9F873E24F82D6A00D637AF /* Interactor */,
+				0B9F873F24F82D7800D637AF /* Presenter */,
+			);
+			path = Favorites;
+			sourceTree = "<group>";
+		};
+		0B9F873D24F82D5A00D637AF /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0B9F873524F81F6200D637AF /* FavoritesTableViewController.swift */,
+			);
+			path = "View Controller";
+			sourceTree = "<group>";
+		};
+		0B9F873E24F82D6A00D637AF /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				0B9F873724F8222400D637AF /* FavoritesInteractor.swift */,
+				0B9F873924F822E000D637AF /* FavoritesWorker.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		0B9F873F24F82D7800D637AF /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				0B9F873B24F8243D00D637AF /* FavoritesPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
 		2F224EE624EEB0DF006991C7 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -165,12 +210,14 @@
 				2F3FA51524EAD07600F56EC7 /* Model */,
 				9C6F1D972420FB0C00D3648A /* Card */,
 				9C6F1D962420FB0300D3648A /* Home */,
+				0B9F873424F81DB700D637AF /* Favorites */,
 				9C6F1D922420F66F00D3648A /* Data */,
 				2F224EE624EEB0DF006991C7 /* Resources */,
 				9C6743C623CCA0F200B1ECA8 /* AppDelegate.swift */,
 				0B9F873224F6894400D637AF /* UserDefaults.swift */,
 				9C6743C823CCA0F200B1ECA8 /* SceneDelegate.swift */,
 				9C6743CC23CCA0F200B1ECA8 /* Main.storyboard */,
+				0B9F874024F8367B00D637AF /* Favorites.storyboard */,
 				9C6743D123CCA0F300B1ECA8 /* LaunchScreen.storyboard */,
 				9C6743D423CCA0F300B1ECA8 /* Info.plist */,
 			);
@@ -295,6 +342,7 @@
 			files = (
 				9C6743D323CCA0F300B1ECA8 /* LaunchScreen.storyboard in Resources */,
 				9C6743D023CCA0F300B1ECA8 /* Assets.xcassets in Resources */,
+				0B9F874124F8367B00D637AF /* Favorites.storyboard in Resources */,
 				9C6743CE23CCA0F200B1ECA8 /* Main.storyboard in Resources */,
 				0B94CF0A24EACFA7001C6960 /* CardViewController.xib in Resources */,
 				2F3FA51424EAB0A500F56EC7 /* feiras-sp.json in Resources */,
@@ -319,7 +367,10 @@
 			files = (
 				2F3FA51924EAD18B00F56EC7 /* Constants.swift in Sources */,
 				2F224EE524EEAEFE006991C7 /* MarketAnnotationView.swift in Sources */,
+				0B9F873824F8222400D637AF /* FavoritesInteractor.swift in Sources */,
 				0B94CF0924EACFA7001C6960 /* CardViewController.swift in Sources */,
+				0B9F873624F81F6200D637AF /* FavoritesTableViewController.swift in Sources */,
+				0B9F873A24F822E000D637AF /* FavoritesWorker.swift in Sources */,
 				0B9F873324F6894400D637AF /* UserDefaults.swift in Sources */,
 				9C6743CB23CCA0F200B1ECA8 /* HomeViewController.swift in Sources */,
 				2F3FA51724EAD09700F56EC7 /* MarketModel.swift in Sources */,
@@ -328,6 +379,7 @@
 				9C6743C723CCA0F200B1ECA8 /* AppDelegate.swift in Sources */,
 				9C6743C923CCA0F200B1ECA8 /* SceneDelegate.swift in Sources */,
 				0B9F872C24F477DF00D637AF /* CardViewInteractor.swift in Sources */,
+				0B9F873C24F8243D00D637AF /* FavoritesPresenter.swift in Sources */,
 				2F243D7824F56B8600D08000 /* SearchManager.swift in Sources */,
 				2F243D7624F562DB00D08000 /* JSONManager.swift in Sources */,
 				2F243D7424F55D8400D08000 /* SearchTableViewController.swift in Sources */,

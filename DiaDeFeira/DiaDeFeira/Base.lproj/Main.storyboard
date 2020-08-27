@@ -301,7 +301,11 @@
                     </view>
                     <navigationItem key="navigationItem" id="ffV-3b-IaS">
                         <barButtonItem key="backBarButtonItem" title="Voltar" id="CNM-2i-3DO"/>
-                        <barButtonItem key="rightBarButtonItem" image="heart.fill" catalog="system" id="vsF-YA-he8"/>
+                        <barButtonItem key="rightBarButtonItem" image="heart.fill" catalog="system" id="vsF-YA-he8">
+                            <connections>
+                                <segue destination="KAG-HT-a1x" kind="show" identifier="Favorite" id="nio-VW-VUB"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="mapView" destination="IOT-Ar-4DS" id="Sqa-09-oBn"/>
@@ -315,6 +319,16 @@
                 </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="542" y="-18"/>
+        </scene>
+        <!--Favorites-->
+        <scene sceneID="4Vs-ai-jKk">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="Favorites" storyboardName="Favorites" referencedIdentifier="Favorites" id="KAG-HT-a1x" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="jJE-vw-i72"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eqc-xQ-MtN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1091" y="-274"/>
         </scene>
         <!--Search Table View Controller-->
         <scene sceneID="l3h-xw-OXe">
@@ -358,7 +372,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wvc-cd-vTf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1462" y="-18"/>
+            <point key="canvasLocation" x="1678" y="-18"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Gvt-Ss-Rxe">
