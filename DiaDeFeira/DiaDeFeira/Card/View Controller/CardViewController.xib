@@ -62,6 +62,7 @@
                                 <constraint firstAttribute="height" constant="44" id="e4T-Di-ujU"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <color key="tintColor" red="0.14117647059999999" green="0.54117647059999996" blue="0.23921568630000001" alpha="1" colorSpace="calibratedRGB"/>
                             <state key="normal" title="Route" image="routeIcon">
                                 <color key="titleColor" red="0.14117647058823529" green="0.54117647058823526" blue="0.23921568627450979" alpha="1" colorSpace="calibratedRGB"/>
                             </state>
@@ -84,6 +85,7 @@
                                 <constraint firstAttribute="height" constant="44" id="zZf-16-5Df"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <color key="tintColor" red="0.14117647059999999" green="0.54117647059999996" blue="0.23921568630000001" alpha="1" colorSpace="calibratedRGB"/>
                             <state key="normal" title="Favorite" image="favoriteIcon">
                                 <color key="titleColor" red="0.14117647059999999" green="0.54117647059999996" blue="0.23921568630000001" alpha="1" colorSpace="calibratedRGB"/>
                             </state>

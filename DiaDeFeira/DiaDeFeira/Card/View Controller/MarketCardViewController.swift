@@ -92,33 +92,41 @@ extension HomeViewController: CloseCardDelegate, RouteDelegate, FavoriteDelegate
         return selectedMarket
     }
     
-    func addOrRemoveFavorite(market: MarketModel) {
+    func getFavoritesMarkets() -> [MarketModel] {
+        var favorites: [MarketModel] = []
         let decoded = UserDefaultsStruct.FavoriteMarkets.favorites
+        
+        //Decode
+        do {
+           favorites = try NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(decoded) as! [MarketModel]
+        } catch {
+            print("Error decoding user defaults data")
+        }
+        
+        return favorites
+    }
+    
+    func addOrRemoveFavorite(market: MarketModel) {
         var userFavorites: [MarketModel] = []
         var alreadyFavorite: Bool = false
         
-         do {
-            userFavorites = try NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(decoded) as! [MarketModel]
-             
-             
-            for item in userFavorites {
-                if item.latitude == selectedPinCoordinate.latitude &&
-                    item.longitude == selectedPinCoordinate.longitude {
-                    guard let index = userFavorites.firstIndex(of: item) else { return }
-                    userFavorites.remove(at: index)
-                    
-                    alreadyFavorite = true
-                }
+        //Decode
+        userFavorites = getFavoritesMarkets()
+        for item in userFavorites {
+            if item.latitude == selectedPinCoordinate.latitude &&
+                item.longitude == selectedPinCoordinate.longitude {
+                guard let index = userFavorites.firstIndex(of: item) else { return }
+                userFavorites.remove(at: index)
+                
+                alreadyFavorite = true
             }
+        }
+        
+        if !alreadyFavorite {
+            userFavorites.append(market)
+        }
             
-            if !alreadyFavorite {
-                userFavorites.append(market)
-            }
-            
-         } catch {
-             print("Error decoding user defaults data")
-         }
-         
+        //Encode
          do {
              let encodedData: Data = try NSKeyedArchiver.archivedData(withRootObject: userFavorites, requiringSecureCoding: false)
              
@@ -126,6 +134,9 @@ extension HomeViewController: CloseCardDelegate, RouteDelegate, FavoriteDelegate
          } catch {
              print("Error encoding user defaults data")
          }
+        
+        let favoriteButton = cardViewPresenter.formatFavoriteButton(isFavorite: !alreadyFavorite)
+        cardViewController.configureFavoriteButton(buttonModel: favoriteButton)
     }
     
     func setUpCardInfo() {
@@ -142,6 +153,18 @@ extension HomeViewController: CloseCardDelegate, RouteDelegate, FavoriteDelegate
                                                         distance: marketDistance)
         
         cardViewController.configureCard(cardModel: formatedCard)
+        
+        let favorites = getFavoritesMarkets()
+        var isFavorite: Bool = false
+        for item in favorites {
+            if item.latitude == market.latitude && item.longitude == market.longitude {
+                isFavorite = true
+                break
+            }
+        }
+        
+        let favoriteButton = cardViewPresenter.formatFavoriteButton(isFavorite: isFavorite)
+        cardViewController.configureFavoriteButton(buttonModel: favoriteButton)
 
     }
     

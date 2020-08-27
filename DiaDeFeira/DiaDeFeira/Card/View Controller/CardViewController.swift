@@ -38,6 +38,8 @@ class CardViewController: UIViewController {
         weekDaysTitle.text = "Dias da semana"
         addressTitle.text = "Endereço"
         routeButton.setTitle("Rota", for: .normal)
+        routeButton.tintColor = AppColors.green
+        favoriteButton.tintColor = AppColors.green
     }
     
     func configureCard(cardModel: CardViewPresenter.CardViewModel) {
@@ -47,6 +49,12 @@ class CardViewController: UIViewController {
         street.text = cardModel.street
         neighborhood.text = cardModel.neighborhood
         city.text = cardModel.city
+    }
+    
+    func configureFavoriteButton(buttonModel: CardViewPresenter.FavoriteButtonModel) {
+        favoriteButton.setTitle(buttonModel.label, for: .normal)
+        favoriteButton.tintColor = buttonModel.color
+        favoriteButton.setTitleColor(buttonModel.color, for: .normal)
     }
     
     @IBAction func closeButtonTapped(_ sender: UIButton) {

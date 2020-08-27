@@ -15,9 +15,14 @@ class CardViewPresenter {
         let marketTitle: String
         let distance: String
         let weekdays: String
-        var city: String
-        var neighborhood: String
-        var street: String
+        let city: String
+        let neighborhood: String
+        let street: String
+    }
+    
+    struct FavoriteButtonModel {
+        var label: String
+        var color: UIColor
     }
     
     func formatCard(market: MarketModel, distance: Double) -> CardViewModel {
@@ -32,6 +37,16 @@ class CardViewPresenter {
                                  street: market.street)
         
         return card
+    }
+    
+    func formatFavoriteButton(isFavorite: Bool) -> FavoriteButtonModel {
+        if isFavorite {
+            let button = FavoriteButtonModel(label: "Favorito", color: AppColors.red)
+            return button
+        } else {
+            let button = FavoriteButtonModel(label: "Favoritar", color: AppColors.green)
+            return button
+        }
     }
     
 }
