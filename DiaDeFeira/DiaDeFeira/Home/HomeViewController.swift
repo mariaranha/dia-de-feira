@@ -15,16 +15,20 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate, MKMapView
     @IBOutlet var buttonsArray: [UIButton]!
     @IBOutlet weak var filterButton: UIButton!
     
-    
-    fileprivate let locationManager = CLLocationManager()
+    let locationManager = CLLocationManager()
+    var marketsArray: [MarketModel]!
     weak var searchDelegate: SearchResultDelegate?
     var searchController: UISearchController? = nil
-    var marketsArray: [MarketModel]!
     var mapAnnotations: [MKAnnotation] = []
     var selectedFilteredDistance: Int? = nil
     var isDistanceFilterAplied: Bool = false
     var isDayFilterAplied: Bool = false
     
+    /// Card
+    enum CardState {
+        case expanded
+        case collapsed
+    }
     
     override func viewWillAppear(_ animated: Bool) {
         if isDistanceFilterAplied {
@@ -42,16 +46,37 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate, MKMapView
     }
     
     
+    var cardViewPresenter = CardViewPresenter()
+    var cardViewInteractor = CardViewInteractor()
+    var cardViewController: CardViewController!
+    
+    let blackView = UIView()
+    let cardHandleAreaHeight: CGFloat = 140
+    let cardHeight: CGFloat = 340
+    
+    var cardVisible = false
+    
+    var nextCardState: CardState {
+        return cardVisible ? .collapsed : .expanded
+    }
+    
+    var runningAnimations = [UIViewPropertyAnimator]()
+    var animationProgressWhenInterrupted: CGFloat = 0
+    
+    var selectedPinCoordinate = CLLocationCoordinate2D()
+    var viewLauncherCard: UIView!
+    var selectedMarket: [MarketModel]!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setSearchBar()
-        setFilterButtons()
         setMapButtons()
         
         checkLocationPermission()
         
         locationManager.delegate = self
+        mapView.delegate = self
         
         // Registering custom annotations on mapview
         mapView.register(MarketAnnotationView.self,
@@ -126,14 +151,6 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate, MKMapView
             self.mapAnnotations.append(annotation)
             self.mapView.addAnnotation(annotation)
         }
-    }
-    
-    
-    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-        let annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: "marketPin")
-        annotationView.image =  UIImage(named: "marketAnnotation")
-        annotationView.canShowCallout = true
-        return annotationView
     }
     
     
