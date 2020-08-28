@@ -52,6 +52,9 @@
                                                                 <integer key="value" value="5"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <segue destination="kjr-XH-HbB" kind="show" identifier="" id="WQA-nw-Vcm"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XDB-YH-iBN">
                                                         <rect key="frame" x="68" y="0.0" width="55" height="30"/>
@@ -77,6 +80,9 @@
                                                                 <real key="value" value="5"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="dayFilterButtons:" destination="CMz-bd-hYq" eventType="touchUpInside" id="ORh-rT-eiQ"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MD4-HU-7Ni">
                                                         <rect key="frame" x="128" y="0.0" width="54.5" height="30"/>
@@ -102,6 +108,9 @@
                                                                 <real key="value" value="5"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="dayFilterButtons:" destination="CMz-bd-hYq" eventType="touchUpInside" id="NdH-4Z-DOv"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZEY-6b-9OV">
                                                         <rect key="frame" x="187.5" y="0.0" width="55" height="30"/>
@@ -127,6 +136,9 @@
                                                                 <real key="value" value="5"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="dayFilterButtons:" destination="CMz-bd-hYq" eventType="touchUpInside" id="nGA-8l-jll"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B6Y-lx-bKl">
                                                         <rect key="frame" x="247.5" y="0.0" width="55" height="30"/>
@@ -152,6 +164,9 @@
                                                                 <real key="value" value="5"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="dayFilterButtons:" destination="CMz-bd-hYq" eventType="touchUpInside" id="X9v-4N-khb"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nUp-em-xWx">
                                                         <rect key="frame" x="307.5" y="0.0" width="55" height="30"/>
@@ -177,6 +192,9 @@
                                                                 <real key="value" value="5"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="dayFilterButtons:" destination="CMz-bd-hYq" eventType="touchUpInside" id="3dk-du-0IQ"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SFk-Rs-2hx">
                                                         <rect key="frame" x="367.5" y="0.0" width="54.5" height="30"/>
@@ -202,6 +220,9 @@
                                                                 <real key="value" value="5"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="dayFilterButtons:" destination="CMz-bd-hYq" eventType="touchUpInside" id="zh0-pu-dZV"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GFW-fD-UYv">
                                                         <rect key="frame" x="427" y="0.0" width="55" height="30"/>
@@ -227,6 +248,9 @@
                                                                 <real key="value" value="5"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="dayFilterButtons:" destination="CMz-bd-hYq" eventType="touchUpInside" id="i8j-kw-Rb2"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Xr-Ws-u2N">
                                                         <rect key="frame" x="487" y="0.0" width="55" height="30"/>
@@ -252,6 +276,9 @@
                                                                 <real key="value" value="5"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="dayFilterButtons:" destination="CMz-bd-hYq" eventType="touchUpInside" id="UbW-Dd-fck"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="tintColor" red="0.14117647059999999" green="0.54117647059999996" blue="0.23921568630000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -304,7 +331,17 @@
                         <barButtonItem key="rightBarButtonItem" image="heart.fill" catalog="system" id="vsF-YA-he8"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="filterButton" destination="mxZ-1v-8Af" id="FE3-Lp-iqw"/>
                         <outlet property="mapView" destination="IOT-Ar-4DS" id="Sqa-09-oBn"/>
+                        <outletCollection property="buttonsArray" destination="XDB-YH-iBN" collectionClass="NSMutableArray" id="alq-Jg-PXM"/>
+                        <outletCollection property="buttonsArray" destination="MD4-HU-7Ni" collectionClass="NSMutableArray" id="Ooh-Zd-V6m"/>
+                        <outletCollection property="buttonsArray" destination="ZEY-6b-9OV" collectionClass="NSMutableArray" id="QLk-nW-Gqu"/>
+                        <outletCollection property="buttonsArray" destination="B6Y-lx-bKl" collectionClass="NSMutableArray" id="tdT-XP-jCT"/>
+                        <outletCollection property="buttonsArray" destination="nUp-em-xWx" collectionClass="NSMutableArray" id="rqb-gn-D6t"/>
+                        <outletCollection property="buttonsArray" destination="SFk-Rs-2hx" collectionClass="NSMutableArray" id="N58-vF-2pW"/>
+                        <outletCollection property="buttonsArray" destination="GFW-fD-UYv" collectionClass="NSMutableArray" id="Ut6-B5-9a6"/>
+                        <outletCollection property="buttonsArray" destination="5Xr-Ws-u2N" collectionClass="NSMutableArray" id="HnH-fg-tb8"/>
+                        <outletCollection property="buttonsArray" destination="mxZ-1v-8Af" collectionClass="NSMutableArray" id="FoQ-ic-awW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xtd-e8-7Oq" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -315,6 +352,16 @@
                 </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="542" y="-18"/>
+        </scene>
+        <!--Filter-->
+        <scene sceneID="xzx-kW-EFU">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="Filter" storyboardName="Filter" referencedIdentifier="Filter" id="kjr-XH-HbB" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="4UH-u3-xmd"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d8s-1z-UCV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1238" y="-18"/>
         </scene>
         <!--Search Table View Controller-->
         <scene sceneID="l3h-xw-OXe">
@@ -358,7 +405,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wvc-cd-vTf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1462" y="-18"/>
+            <point key="canvasLocation" x="1616" y="-18"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Gvt-Ss-Rxe">

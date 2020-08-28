@@ -19,7 +19,7 @@ protocol RouteDelegate: NSObjectProtocol {
 }
 
 protocol FavoriteDelegate: NSObjectProtocol {
-    func getSelectedMarket() -> MarketModel
+    func getSelectedMarket() -> MarketModel?
     func addOrRemoveFavorite(market: MarketModel)
 }
 
@@ -78,7 +78,7 @@ extension HomeViewController: CloseCardDelegate, RouteDelegate, FavoriteDelegate
         mapItem.openInMaps(launchOptions: options)
     }
     
-    func getSelectedMarket() -> MarketModel {
+    func getSelectedMarket() -> MarketModel? {
         var selectedMarket: MarketModel!
         
         for market in marketsArray {
@@ -95,6 +95,10 @@ extension HomeViewController: CloseCardDelegate, RouteDelegate, FavoriteDelegate
     func getFavoritesMarkets() -> [MarketModel] {
         var favorites: [MarketModel] = []
         let decoded = UserDefaultsStruct.FavoriteMarkets.favorites
+        
+        guard decoded.count != 0 else {
+            return favorites
+        }
         
         //Decode
         do {
@@ -140,32 +144,33 @@ extension HomeViewController: CloseCardDelegate, RouteDelegate, FavoriteDelegate
     }
     
     func setUpCardInfo() {
-        //creates an empty card
-        showCard()
         
-        let market = getSelectedMarket()
-        let marketDistance = cardViewInteractor.haversineDinstance(la1: locationManager.location?.coordinate.latitude ?? 0,
-                                                                   lo1: locationManager.location?.coordinate.longitude ?? 0,
-                                                                   la2: market.latitude,
-                                                                   lo2: market.longitude)
-        
-        let formatedCard = cardViewPresenter.formatCard(market: market,
-                                                        distance: marketDistance)
-        
-        cardViewController.configureCard(cardModel: formatedCard)
-        
-        let favorites = getFavoritesMarkets()
-        var isFavorite: Bool = false
-        for item in favorites {
-            if item.latitude == market.latitude && item.longitude == market.longitude {
-                isFavorite = true
-                break
+        if let market = getSelectedMarket() {
+            //creates an empty card
+            showCard()
+            
+            let marketDistance = cardViewInteractor.haversineDinstance(la1: locationManager.location?.coordinate.latitude ?? 0,
+                                                                       lo1: locationManager.location?.coordinate.longitude ?? 0,
+                                                                       la2: market.latitude,
+                                                                       lo2: market.longitude)
+            
+            let formatedCard = cardViewPresenter.formatCard(market: market,
+                                                            distance: marketDistance)
+            
+            cardViewController.configureCard(cardModel: formatedCard)
+            
+            let favorites = getFavoritesMarkets()
+            var isFavorite: Bool = false
+            for item in favorites {
+                if item.latitude == market.latitude && item.longitude == market.longitude {
+                    isFavorite = true
+                    break
+                }
             }
+            
+            let favoriteButton = cardViewPresenter.formatFavoriteButton(isFavorite: isFavorite)
+            cardViewController.configureFavoriteButton(buttonModel: favoriteButton)
         }
-        
-        let favoriteButton = cardViewPresenter.formatFavoriteButton(isFavorite: isFavorite)
-        cardViewController.configureFavoriteButton(buttonModel: favoriteButton)
-
     }
     
     func showCard() {
