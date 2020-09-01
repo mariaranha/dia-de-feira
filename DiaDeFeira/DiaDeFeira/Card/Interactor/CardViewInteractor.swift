@@ -63,5 +63,6 @@ class CardViewInteractor {
             homeView.mapView.deselectAnnotation(pin, animated: true)
         }
     }
+    
 
 }

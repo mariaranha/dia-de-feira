@@ -15,6 +15,7 @@ class FavoritesPresenter {
     struct FavoritesViewModel {
         let marketTitle: String
         let marketSubtitle: String
+        let ID: (latitude: Double, longitude: Double)
     }
     
     func formatFavorites() -> [FavoritesViewModel] {
@@ -23,9 +24,18 @@ class FavoritesPresenter {
         
         for market in markets {
             let favorite = FavoritesViewModel(marketTitle: market.neighborhood,
-                                              marketSubtitle: market.street)
+                                              marketSubtitle: market.street,
+                                              ID: (latitude: market.latitude, longitude: market.longitude))
             favoritesArray.append(favorite)
         }
         return favoritesArray
     }
+    
+//    func formatFavoriteMarket(market: MarketModel) -> FavoritesViewModel {
+//        let favorite = FavoritesViewModel(marketTitle: market.neighborhood,
+//                                          marketSubtitle: market.street,
+//                                          ID: (latitude: market.latitude, longitude: market.longitude))
+//
+//        return favorite
+//    }
 }

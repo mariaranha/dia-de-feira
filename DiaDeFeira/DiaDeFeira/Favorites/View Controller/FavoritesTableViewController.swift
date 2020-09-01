@@ -10,8 +10,11 @@ import UIKit
 
 class FavoritesTableViewController: UITableViewController {
     
+    let interactor = FavoritesInteractor()
     let presenter = FavoritesPresenter()
     var favoritesArray: [FavoritesPresenter.FavoritesViewModel] = []
+    
+    weak var selectedFavoriteDelegate: SelectedFavoriteDelegate!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +27,7 @@ class FavoritesTableViewController: UITableViewController {
         super.viewWillAppear(true)
         
         favoritesArray = presenter.formatFavorites()
+        
     }
 
     // MARK: - Table view data source
@@ -42,6 +46,14 @@ class FavoritesTableViewController: UITableViewController {
         cell.detailTextLabel?.text = favoritesArray[indexPath.row].marketSubtitle
         
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectedFavorite = favoritesArray[indexPath.row]
+        let selectedMarket = interactor.findMarketWithCoordinates(latitude: selectedFavorite.ID.latitude,
+                                                                  longitude: selectedFavorite.ID.longitude)
+        selectedFavoriteDelegate.showSelectedFavorite(market: selectedMarket)
+        
     }
 
 

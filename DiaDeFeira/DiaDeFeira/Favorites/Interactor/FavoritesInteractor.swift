@@ -15,4 +15,18 @@ class FavoritesInteractor {
         let favorites = worker.getFavoritesMarkets()
         return favorites
     }
+    
+    func findMarketWithCoordinates(latitude: Double, longitude: Double) -> MarketModel {
+        let favorites = getMarkets()
+        var marketFound: MarketModel!
+        
+        for market in favorites {
+            if market.latitude == latitude && market.longitude == longitude {
+                marketFound = market
+                break
+            }
+        }
+        
+        return marketFound
+    }
 }

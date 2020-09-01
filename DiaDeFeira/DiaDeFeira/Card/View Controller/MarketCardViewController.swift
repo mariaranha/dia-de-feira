@@ -23,11 +23,15 @@ protocol FavoriteDelegate: NSObjectProtocol {
     func addOrRemoveFavorite(market: MarketModel)
 }
 
+protocol SelectedFavoriteDelegate: NSObjectProtocol {
+    func showSelectedFavorite(market: MarketModel)
+}
+
 extension HomeViewController: CloseCardDelegate, RouteDelegate, FavoriteDelegate {
     //Select Market
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
         
-        if selectedPinCoordinate.latitude != view.annotation!.coordinate.latitude && selectedPinCoordinate.longitude != view.annotation!.coordinate.longitude &&
+t        if selectedPinCoordinate.latitude != view.annotation!.coordinate.latitude && selectedPinCoordinate.longitude != view.annotation!.coordinate.longitude &&
             cardViewController != nil {
             viewLauncherCard.removeFromSuperview()
         }
@@ -166,7 +170,7 @@ extension HomeViewController: CloseCardDelegate, RouteDelegate, FavoriteDelegate
     
     func setupCard() -> UIView {
         cardViewController = CardViewController(nibName: "CardViewController", bundle: nil)
-        self.addChild(cardViewController)
+//        self.addChild(cardViewController)
         self.view.addSubview(cardViewController.view)
         
         cardViewController.view.frame = CGRect(x: 0,
@@ -296,5 +300,51 @@ extension HomeViewController: CloseCardDelegate, RouteDelegate, FavoriteDelegate
         for animator in runningAnimations {
             animator.continueAnimation(withTimingParameters: nil, durationFactor: 0)
         }
+    }
+}
+
+// - MARK: Selected Favorite
+extension HomeViewController: SelectedFavoriteDelegate {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "Favorite" {
+            let favorite = segue.destination as? FavoritesTableViewController
+            favorite?.selectedFavoriteDelegate = self
+        }
+    }
+    
+    func showSelectedFavorite(market: MarketModel) {
+        selectedPinCoordinate = CLLocationCoordinate2D(latitude: market.latitude,
+                                                       longitude: market.longitude)
+        
+        let mapAnnotations = mapView.annotations
+        var selectedAnnotation: MKAnnotation!
+        
+        for annotation in mapAnnotations {
+            if annotation.coordinate.longitude == selectedPinCoordinate.longitude && annotation.coordinate.latitude == selectedPinCoordinate.latitude {
+                selectedAnnotation = annotation
+                break
+            }
+        }
+        
+        guard let selectedAnnotationView = mapView(mapView, viewFor: selectedAnnotation) else { return }
+        selectedAnnotationView.annotation = selectedAnnotation
+         
+        var location = CLLocation()
+        
+        let latitude = selectedPinCoordinate.latitude
+        let longitude = selectedPinCoordinate.longitude
+        location = CLLocation(latitude: latitude, longitude: longitude)
+        
+        mapView.selectAnnotation(selectedAnnotation, animated: true)
+        
+        //function center on map location modified
+        let coordinateRegion = MKCoordinateRegion(center: location.coordinate,
+                                                  latitudinalMeters: 1500,
+                                                  longitudinalMeters: 1500)
+        mapView.setRegion(coordinateRegion, animated: true)
+    }
+    
+    @IBAction func backToCard(_ sender: UIStoryboardSegue) {
+    
     }
 }
