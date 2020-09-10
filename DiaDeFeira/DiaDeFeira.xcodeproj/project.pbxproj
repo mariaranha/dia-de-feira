@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -24,12 +24,16 @@
 		2F3FA51924EAD18B00F56EC7 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3FA51824EAD18B00F56EC7 /* Constants.swift */; };
 		2F927BB524F027EB00E6FD86 /* DiaDeFeiraTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F927BB424F027EB00E6FD86 /* DiaDeFeiraTests.swift */; };
 		2F927BBC24F0289500E6FD86 /* HelloWorld.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F927BAC24F00CB000E6FD86 /* HelloWorld.swift */; };
+		440775558DA9483F5B0D5C6B /* Pods_DiaDeFeiraTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F91222A57D2EC98060AD156 /* Pods_DiaDeFeiraTests.framework */; };
 		9C6743C723CCA0F200B1ECA8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6743C623CCA0F200B1ECA8 /* AppDelegate.swift */; };
 		9C6743C923CCA0F200B1ECA8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6743C823CCA0F200B1ECA8 /* SceneDelegate.swift */; };
 		9C6743CB23CCA0F200B1ECA8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6743CA23CCA0F200B1ECA8 /* HomeViewController.swift */; };
 		9C6743CE23CCA0F200B1ECA8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C6743CC23CCA0F200B1ECA8 /* Main.storyboard */; };
 		9C6743D023CCA0F300B1ECA8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C6743CF23CCA0F300B1ECA8 /* Assets.xcassets */; };
 		9C6743D323CCA0F300B1ECA8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C6743D123CCA0F300B1ECA8 /* LaunchScreen.storyboard */; };
+		9CA55789250A6FB2007A8BD4 /* FirestoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA55788250A6FB2007A8BD4 /* FirestoreManager.swift */; };
+		9CA5578B250A75B1007A8BD4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9CA5578A250A75B1007A8BD4 /* GoogleService-Info.plist */; };
+		B1C9F2065299A8461C2FDCDF /* Pods_DiaDeFeira.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FC8A880BEB416EC2A53B4D8 /* Pods_DiaDeFeira.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +66,11 @@
 		2F927BB224F027EB00E6FD86 /* DiaDeFeiraTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DiaDeFeiraTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F927BB424F027EB00E6FD86 /* DiaDeFeiraTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaDeFeiraTests.swift; sourceTree = "<group>"; };
 		2F927BB624F027EB00E6FD86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		35E09A2D1B0C238B3F673276 /* Pods-DiaDeFeiraTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DiaDeFeiraTests.release.xcconfig"; path = "Target Support Files/Pods-DiaDeFeiraTests/Pods-DiaDeFeiraTests.release.xcconfig"; sourceTree = "<group>"; };
+		3FC8A880BEB416EC2A53B4D8 /* Pods_DiaDeFeira.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DiaDeFeira.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F91222A57D2EC98060AD156 /* Pods_DiaDeFeiraTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DiaDeFeiraTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		836C8D30F93D92A8A46AE38D /* Pods-DiaDeFeiraTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DiaDeFeiraTests.debug.xcconfig"; path = "Target Support Files/Pods-DiaDeFeiraTests/Pods-DiaDeFeiraTests.debug.xcconfig"; sourceTree = "<group>"; };
+		8C9C4F47B04A254AE83B0690 /* Pods-DiaDeFeira.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DiaDeFeira.release.xcconfig"; path = "Target Support Files/Pods-DiaDeFeira/Pods-DiaDeFeira.release.xcconfig"; sourceTree = "<group>"; };
 		9C6743C323CCA0F200B1ECA8 /* DiaDeFeira.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DiaDeFeira.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C6743C623CCA0F200B1ECA8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9C6743C823CCA0F200B1ECA8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -70,6 +79,9 @@
 		9C6743CF23CCA0F300B1ECA8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9C6743D223CCA0F300B1ECA8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9C6743D423CCA0F300B1ECA8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9CA55788250A6FB2007A8BD4 /* FirestoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreManager.swift; sourceTree = "<group>"; };
+		9CA5578A250A75B1007A8BD4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		FC7F8F4CA26FAE6052E75D16 /* Pods-DiaDeFeira.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DiaDeFeira.debug.xcconfig"; path = "Target Support Files/Pods-DiaDeFeira/Pods-DiaDeFeira.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +89,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				440775558DA9483F5B0D5C6B /* Pods_DiaDeFeiraTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,6 +97,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1C9F2065299A8461C2FDCDF /* Pods_DiaDeFeira.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,12 +159,34 @@
 			path = DiaDeFeiraTests;
 			sourceTree = "<group>";
 		};
+		31586D36ED0D217A11FADE9B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FC7F8F4CA26FAE6052E75D16 /* Pods-DiaDeFeira.debug.xcconfig */,
+				8C9C4F47B04A254AE83B0690 /* Pods-DiaDeFeira.release.xcconfig */,
+				836C8D30F93D92A8A46AE38D /* Pods-DiaDeFeiraTests.debug.xcconfig */,
+				35E09A2D1B0C238B3F673276 /* Pods-DiaDeFeiraTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		8122A593D76AB21F388DFB50 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3FC8A880BEB416EC2A53B4D8 /* Pods_DiaDeFeira.framework */,
+				4F91222A57D2EC98060AD156 /* Pods_DiaDeFeiraTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		9C6743BA23CCA0F200B1ECA8 = {
 			isa = PBXGroup;
 			children = (
 				9C6743C523CCA0F200B1ECA8 /* DiaDeFeira */,
 				2F927BB324F027EB00E6FD86 /* DiaDeFeiraTests */,
 				9C6743C423CCA0F200B1ECA8 /* Products */,
+				31586D36ED0D217A11FADE9B /* Pods */,
+				8122A593D76AB21F388DFB50 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -166,6 +202,7 @@
 		9C6743C523CCA0F200B1ECA8 /* DiaDeFeira */ = {
 			isa = PBXGroup;
 			children = (
+				9CA55787250A6FA2007A8BD4 /* Database */,
 				2F3FA51524EAD07600F56EC7 /* Model */,
 				9C6F1D972420FB0C00D3648A /* Card */,
 				9C6F1D962420FB0300D3648A /* Home */,
@@ -177,6 +214,7 @@
 				9C6743CC23CCA0F200B1ECA8 /* Main.storyboard */,
 				2F243D7924F582B900D08000 /* Filter.storyboard */,
 				9C6743D123CCA0F300B1ECA8 /* LaunchScreen.storyboard */,
+				9CA5578A250A75B1007A8BD4 /* GoogleService-Info.plist */,
 				9C6743D423CCA0F300B1ECA8 /* Info.plist */,
 			);
 			path = DiaDeFeira;
@@ -211,6 +249,14 @@
 			path = Card;
 			sourceTree = "<group>";
 		};
+		9CA55787250A6FA2007A8BD4 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				9CA55788250A6FB2007A8BD4 /* FirestoreManager.swift */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -218,6 +264,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2F927BB924F027EB00E6FD86 /* Build configuration list for PBXNativeTarget "DiaDeFeiraTests" */;
 			buildPhases = (
+				37C6DD1588B0C94AD7413AD9 /* [CP] Check Pods Manifest.lock */,
 				2F927BAE24F027EB00E6FD86 /* Sources */,
 				2F927BAF24F027EB00E6FD86 /* Frameworks */,
 				2F927BB024F027EB00E6FD86 /* Resources */,
@@ -236,9 +283,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9C6743D723CCA0F300B1ECA8 /* Build configuration list for PBXNativeTarget "DiaDeFeira" */;
 			buildPhases = (
+				D1871E4409C36D7051983F11 /* [CP] Check Pods Manifest.lock */,
 				9C6743BF23CCA0F200B1ECA8 /* Sources */,
 				9C6743C023CCA0F200B1ECA8 /* Frameworks */,
 				9C6743C123CCA0F200B1ECA8 /* Resources */,
+				F019936BB5290A4EB9E4DE58 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -305,10 +354,75 @@
 				9C6743CE23CCA0F200B1ECA8 /* Main.storyboard in Resources */,
 				0B94CF0A24EACFA7001C6960 /* CardViewController.xib in Resources */,
 				2F3FA51424EAB0A500F56EC7 /* feiras-sp.json in Resources */,
+				9CA5578B250A75B1007A8BD4 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		37C6DD1588B0C94AD7413AD9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DiaDeFeiraTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D1871E4409C36D7051983F11 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DiaDeFeira-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F019936BB5290A4EB9E4DE58 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DiaDeFeira/Pods-DiaDeFeira-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DiaDeFeira/Pods-DiaDeFeira-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DiaDeFeira/Pods-DiaDeFeira-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2F927BAE24F027EB00E6FD86 /* Sources */ = {
@@ -339,6 +453,7 @@
 				2F243D7824F56B8600D08000 /* SearchManager.swift in Sources */,
 				2F243D7624F562DB00D08000 /* JSONManager.swift in Sources */,
 				2F243D7424F55D8400D08000 /* SearchTableViewController.swift in Sources */,
+				9CA55789250A6FB2007A8BD4 /* FirestoreManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -374,6 +489,7 @@
 /* Begin XCBuildConfiguration section */
 		2F927BBA24F027EB00E6FD86 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 836C8D30F93D92A8A46AE38D /* Pods-DiaDeFeiraTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -395,6 +511,7 @@
 		};
 		2F927BBB24F027EB00E6FD86 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 35E09A2D1B0C238B3F673276 /* Pods-DiaDeFeiraTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -530,10 +647,11 @@
 		};
 		9C6743D823CCA0F300B1ECA8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FC7F8F4CA26FAE6052E75D16 /* Pods-DiaDeFeira.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = VZ4Y7Q4FJ2;
+				DEVELOPMENT_TEAM = 7FH5Q2A622;
 				INFOPLIST_FILE = DiaDeFeira/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -548,10 +666,11 @@
 		};
 		9C6743D923CCA0F300B1ECA8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8C9C4F47B04A254AE83B0690 /* Pods-DiaDeFeira.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = VZ4Y7Q4FJ2;
+				DEVELOPMENT_TEAM = 7FH5Q2A622;
 				INFOPLIST_FILE = DiaDeFeira/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

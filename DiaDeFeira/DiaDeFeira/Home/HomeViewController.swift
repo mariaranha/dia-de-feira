@@ -142,15 +142,17 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate, MKMapView
     /// Adds all markets loaded from json file to the mapview
     func addMarketsAnnotations() {
         
-        self.marketsArray = JSONManager.loadJSON()
+        FirestoreManager.shared.getMarkets(completion: { (markets) in
+            self.marketsArray = markets
+            for market in self.marketsArray {
+                let annotation = MKPointAnnotation()
+                annotation.title = market.street
+                annotation.coordinate = CLLocationCoordinate2D(latitude: market.latitude, longitude: market.longitude)
+                self.mapAnnotations.append(annotation)
+                self.mapView.addAnnotation(annotation)
+            }
+        })
         
-        for market in marketsArray {
-            let annotation = MKPointAnnotation()
-            annotation.title = market.street
-            annotation.coordinate = CLLocationCoordinate2D(latitude: market.latitude, longitude: market.longitude)
-            self.mapAnnotations.append(annotation)
-            self.mapView.addAnnotation(annotation)
-        }
     }
     
     

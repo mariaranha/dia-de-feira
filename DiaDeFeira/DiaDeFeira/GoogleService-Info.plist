@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>498567694843-c6ahvcqt566auu3c17in9jfb06mrk0ur.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.498567694843-c6ahvcqt566auu3c17in9jfb06mrk0ur</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAm4mXTv2VFTdTwIFk7srsjG8snZtEq-GM</string>
+	<key>GCM_SENDER_ID</key>
+	<string>498567694843</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.marina.DiaDeFeira</string>
+	<key>PROJECT_ID</key>
+	<string>stopwatch-54f0b</string>
+	<key>STORAGE_BUCKET</key>
+	<string>stopwatch-54f0b.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false/>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false/>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true/>
+	<key>IS_GCM_ENABLED</key>
+	<true/>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true/>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:498567694843:ios:66cd12e21583874c42e35e</string>
+	<key>DATABASE_URL</key>
+	<string>https://stopwatch-54f0b.firebaseio.com</string>
+</dict>
+</plist>

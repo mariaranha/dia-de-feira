@@ -1,0 +1,6 @@
+framework module Pods_DiaDeFeiraTests {
+  umbrella header "Pods-DiaDeFeiraTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
