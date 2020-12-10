@@ -19,6 +19,7 @@
 		2F243D7824F56B8600D08000 /* SearchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F243D7724F56B8600D08000 /* SearchManager.swift */; };
 		2F243D7A24F582B900D08000 /* Filter.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F243D7924F582B900D08000 /* Filter.storyboard */; };
 		2F243D7C24F5872200D08000 /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F243D7B24F5872200D08000 /* FilterViewController.swift */; };
+		2F3AAD7A258268F600CCE6F6 /* FavoritesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3AAD79258268F600CCE6F6 /* FavoritesTableViewController.swift */; };
 		2F3FA51424EAB0A500F56EC7 /* feiras-sp.json in Resources */ = {isa = PBXBuildFile; fileRef = 2F3FA51324EAB0A500F56EC7 /* feiras-sp.json */; };
 		2F3FA51724EAD09700F56EC7 /* MarketModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3FA51624EAD09700F56EC7 /* MarketModel.swift */; };
 		2F3FA51924EAD18B00F56EC7 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3FA51824EAD18B00F56EC7 /* Constants.swift */; };
@@ -55,6 +56,7 @@
 		2F243D7724F56B8600D08000 /* SearchManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchManager.swift; sourceTree = "<group>"; };
 		2F243D7924F582B900D08000 /* Filter.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Filter.storyboard; sourceTree = "<group>"; };
 		2F243D7B24F5872200D08000 /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
+		2F3AAD79258268F600CCE6F6 /* FavoritesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesTableViewController.swift; sourceTree = "<group>"; };
 		2F3FA51324EAB0A500F56EC7 /* feiras-sp.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "feiras-sp.json"; sourceTree = "<group>"; };
 		2F3FA51624EAD09700F56EC7 /* MarketModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketModel.swift; sourceTree = "<group>"; };
 		2F3FA51824EAD18B00F56EC7 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -126,6 +128,14 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		2F3AAD78258268D700CCE6F6 /* Favorites */ = {
+			isa = PBXGroup;
+			children = (
+				2F3AAD79258268F600CCE6F6 /* FavoritesTableViewController.swift */,
+			);
+			path = Favorites;
+			sourceTree = "<group>";
+		};
 		2F3FA51524EAD07600F56EC7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -171,6 +181,7 @@
 				9C6F1D962420FB0300D3648A /* Home */,
 				9C6F1D922420F66F00D3648A /* Data */,
 				2F224EE624EEB0DF006991C7 /* Resources */,
+				2F3AAD78258268D700CCE6F6 /* Favorites */,
 				9C6743C623CCA0F200B1ECA8 /* AppDelegate.swift */,
 				0B9F873224F6894400D637AF /* UserDefaults.swift */,
 				9C6743C823CCA0F200B1ECA8 /* SceneDelegate.swift */,
@@ -327,6 +338,7 @@
 				2F3FA51924EAD18B00F56EC7 /* Constants.swift in Sources */,
 				2F224EE524EEAEFE006991C7 /* MarketAnnotationView.swift in Sources */,
 				0B94CF0924EACFA7001C6960 /* CardViewController.swift in Sources */,
+				2F3AAD7A258268F600CCE6F6 /* FavoritesTableViewController.swift in Sources */,
 				0B9F873324F6894400D637AF /* UserDefaults.swift in Sources */,
 				9C6743CB23CCA0F200B1ECA8 /* HomeViewController.swift in Sources */,
 				2F3FA51724EAD09700F56EC7 /* MarketModel.swift in Sources */,
