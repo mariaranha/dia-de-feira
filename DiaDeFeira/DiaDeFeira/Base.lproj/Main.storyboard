@@ -332,7 +332,7 @@
                         <barButtonItem key="backBarButtonItem" title="Voltar" id="CNM-2i-3DO"/>
                         <barButtonItem key="rightBarButtonItem" image="heart.fill" catalog="system" id="vsF-YA-he8">
                             <connections>
-                                <segue destination="Z7e-Hp-ULQ" kind="show" id="qgD-Rh-D6v"/>
+                                <segue destination="Z7e-Hp-ULQ" kind="show" identifier="goToFavorites" id="qgD-Rh-D6v"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
