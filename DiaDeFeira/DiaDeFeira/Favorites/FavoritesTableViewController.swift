@@ -30,11 +30,10 @@ class FavoritesTableViewController: UITableViewController {
     }
     
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        favoriteMarkets = markets
-        
-    }
+//    override func viewWillAppear(_ animated: Bool) {
+//        super.viewWillAppear(animated)
+//        favoriteMarkets = markets
+//    }
     
     func getFavoritesMarkets() {
         var favorites: [MarketModel] = []
@@ -52,7 +51,8 @@ class FavoritesTableViewController: UITableViewController {
         }
         
         self.favoriteMarkets = favorites
-        self.tableView.reloadData()
+        
+        tableView.reloadData()
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
