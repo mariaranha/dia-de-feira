@@ -29,12 +29,6 @@ class FavoritesTableViewController: UITableViewController {
         self.getFavoritesMarkets()
     }
     
-    
-//    override func viewWillAppear(_ animated: Bool) {
-//        super.viewWillAppear(animated)
-//        favoriteMarkets = markets
-//    }
-    
     func getFavoritesMarkets() {
         var favorites: [MarketModel] = []
         let decoded = UserDefaultsStruct.FavoriteMarkets.favorites
@@ -70,12 +64,10 @@ class FavoritesTableViewController: UITableViewController {
         return searchCell
     }
     
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        let marketSelected = favoriteMarkets[indexPath.row]
-        selectedFavoriteMarketDelegate?.marketSelected(market: marketSelected)
-    }
-    
+//    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        let marketSelected = favoriteMarkets[indexPath.row]
+//        selectedFavoriteMarketDelegate?.marketSelected(market: marketSelected)
+//    }
 }
 
 
