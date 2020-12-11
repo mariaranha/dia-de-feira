@@ -18,6 +18,7 @@ class SearchTableViewController: UITableViewController {
     
     var markets: [MarketModel] = []
     var filteredMarkets: [MarketModel] = []
+    weak var selectedFavoriteMarketDelegate: SelectedFavoriteMarketDelegate?
 
     
     override func viewDidLoad() {
@@ -45,7 +46,10 @@ class SearchTableViewController: UITableViewController {
         return searchCell
     }
 
-    // TODO: Open selected market card.
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectedMarket = filteredMarkets[indexPath.row]
+        selectedFavoriteMarketDelegate?.marketSelected(market: selectedMarket)
+    }
 }
 
 

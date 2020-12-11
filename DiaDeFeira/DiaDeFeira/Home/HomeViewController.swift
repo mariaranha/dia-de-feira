@@ -109,6 +109,7 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate, MKMapView
             searchController?.searchBar.tintColor = #colorLiteral(red: 0.1411764706, green: 0.5411764706, blue: 0.2392156863, alpha: 1)
             navigationItem.titleView = searchController?.searchBar
             definesPresentationContext = true
+            resultViewController.selectedFavoriteMarketDelegate = self
         }
     }
     
@@ -287,5 +288,14 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate, MKMapView
     // MARK: - Navigation
     @IBAction func unwindFilter(_ seg: UIStoryboardSegue) {
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToFavorites" {
+            if let favoritesVC = segue.destination as? FavoritesTableViewController {
+                favoritesVC.selectedFavoriteMarketDelegate = self
+            }
+        }
+    }
 
 }
+

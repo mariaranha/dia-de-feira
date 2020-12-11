@@ -19,6 +19,7 @@
 		2F243D7824F56B8600D08000 /* SearchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F243D7724F56B8600D08000 /* SearchManager.swift */; };
 		2F243D7A24F582B900D08000 /* Filter.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F243D7924F582B900D08000 /* Filter.storyboard */; };
 		2F243D7C24F5872200D08000 /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F243D7B24F5872200D08000 /* FilterViewController.swift */; };
+		2F3AAD7A258268F600CCE6F6 /* FavoritesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3AAD79258268F600CCE6F6 /* FavoritesTableViewController.swift */; };
 		2F3FA51424EAB0A500F56EC7 /* feiras-sp.json in Resources */ = {isa = PBXBuildFile; fileRef = 2F3FA51324EAB0A500F56EC7 /* feiras-sp.json */; };
 		2F3FA51724EAD09700F56EC7 /* MarketModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3FA51624EAD09700F56EC7 /* MarketModel.swift */; };
 		2F3FA51924EAD18B00F56EC7 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3FA51824EAD18B00F56EC7 /* Constants.swift */; };
@@ -55,6 +56,7 @@
 		2F243D7724F56B8600D08000 /* SearchManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchManager.swift; sourceTree = "<group>"; };
 		2F243D7924F582B900D08000 /* Filter.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Filter.storyboard; sourceTree = "<group>"; };
 		2F243D7B24F5872200D08000 /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
+		2F3AAD79258268F600CCE6F6 /* FavoritesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesTableViewController.swift; sourceTree = "<group>"; };
 		2F3FA51324EAB0A500F56EC7 /* feiras-sp.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "feiras-sp.json"; sourceTree = "<group>"; };
 		2F3FA51624EAD09700F56EC7 /* MarketModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketModel.swift; sourceTree = "<group>"; };
 		2F3FA51824EAD18B00F56EC7 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -126,6 +128,14 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		2F3AAD78258268D700CCE6F6 /* Favorites */ = {
+			isa = PBXGroup;
+			children = (
+				2F3AAD79258268F600CCE6F6 /* FavoritesTableViewController.swift */,
+			);
+			path = Favorites;
+			sourceTree = "<group>";
+		};
 		2F3FA51524EAD07600F56EC7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -171,6 +181,7 @@
 				9C6F1D962420FB0300D3648A /* Home */,
 				9C6F1D922420F66F00D3648A /* Data */,
 				2F224EE624EEB0DF006991C7 /* Resources */,
+				2F3AAD78258268D700CCE6F6 /* Favorites */,
 				9C6743C623CCA0F200B1ECA8 /* AppDelegate.swift */,
 				0B9F873224F6894400D637AF /* UserDefaults.swift */,
 				9C6743C823CCA0F200B1ECA8 /* SceneDelegate.swift */,
@@ -256,7 +267,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1160;
-				LastUpgradeCheck = 1120;
+				LastUpgradeCheck = 1220;
 				ORGANIZATIONNAME = "Marina Miranda Aranha";
 				TargetAttributes = {
 					2F927BB124F027EB00E6FD86 = {
@@ -327,6 +338,7 @@
 				2F3FA51924EAD18B00F56EC7 /* Constants.swift in Sources */,
 				2F224EE524EEAEFE006991C7 /* MarketAnnotationView.swift in Sources */,
 				0B94CF0924EACFA7001C6960 /* CardViewController.swift in Sources */,
+				2F3AAD7A258268F600CCE6F6 /* FavoritesTableViewController.swift in Sources */,
 				0B9F873324F6894400D637AF /* UserDefaults.swift in Sources */,
 				9C6743CB23CCA0F200B1ECA8 /* HomeViewController.swift in Sources */,
 				2F3FA51724EAD09700F56EC7 /* MarketModel.swift in Sources */,
@@ -440,6 +452,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -464,7 +477,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -500,6 +513,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -518,7 +532,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -535,14 +549,15 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VZ4Y7Q4FJ2;
 				INFOPLIST_FILE = DiaDeFeira/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.marina.DiaDeFeira;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lunaticos.DiaDeFeira;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -553,14 +568,15 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VZ4Y7Q4FJ2;
 				INFOPLIST_FILE = DiaDeFeira/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.marina.DiaDeFeira;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lunaticos.DiaDeFeira;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
